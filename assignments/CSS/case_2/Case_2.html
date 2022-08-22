@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
     <style>
         * {
-            /*font-family: 'Poppins', sans-serif;*/
+            font-family: 'Poppins', sans-serif;
         }
 
         header {
@@ -42,40 +43,52 @@
             font-family: 'Poppins', sans-serif;
             color: rgba(46, 41, 41, 0.96);
         }
+        main{
+            position: relative;
+        }
 
-        aside {
+        main>nav{
             position: absolute;
-            width: 200px;
-            height: 100vh;
-            background: #7413ba;
-        }
-
-        aside > nav > ul > li {
-            color: white;
-            font-size: 22px;
-            margin: 15px;
-        }
-
-        main > section > div > img {
-            width: 431px;
-            height: 300px;
-            display: inline-block;
-            position: relative;
-            left: 205px;
-            border: 2px solid darkgreen;
-        }
-
-        main > section > div > p {
-            position: relative;
-            left: 230px;
-            display: block;
-        }
-        footer>div>h1{
-            text-align: center;
-        }
-        footer>div{
-            background: darkgray;
+            background: #2f0f91;
+            width: 270px;
+            top: 0;
             bottom: 0;
+        }
+        main>nav>ul>li{
+            color: white;
+            list-style: none;
+            padding-top: 40px;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        main>nav>ul>li>i{
+            padding-right: 19px;
+        }
+
+        header>nav>ul>li>i{
+            padding-right: 19px;
+        }
+
+        main>nav>ul>li>a{
+            text-decoration: none;
+        }
+        header>nav>ul>li>a{
+            text-decoration: none;
+        }
+        main>section{
+            margin-left: 280px;
+            padding: 10px;
+        }
+        footer{
+            height: 60px;
+            background: #b7b0b0;
+
+        }
+        footer>h2{
+            text-align: center;
+            margin-top: 0;
+            padding-top: 20px;
+            color: white;
         }
     </style>
 </head>
@@ -84,64 +97,73 @@
     <img src="assets/img/favicon.png" alt="logo">
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk">Home</a></li>
+            <li><i class="fa-solid fa-earth-americas"></i><a href="#" target="_blank">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="#" target="_blank">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#" target="_blank">About Us</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <aside>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contact</li>
-                <li>About Us</li>
-            </ul>
-        </nav>
-    </aside>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk">Home</a></li>
+            <li><i class="fa-solid fa-earth-americas"></i><a href="#" target="_blank">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="#" target="_blank">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#" target="_blank">About Us</a></li>
+        </ul>
+    </nav>
     <section>
-        <div>
-            <img src="assets/img/img.jpg" alt="image">
-            <img src="assets/img/img.jpg" alt="image">
-            <img src="assets/img/img.jpg" alt="image">
-        </div>
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, minus. Accusantium aliquid,
-                consectetur consequuntur, debitis dolore doloremque, eaque eius facilis maiores quibusdam rerum <br>sint
-                suscipit tempore velit voluptatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At delectus deserunt error esse expedita qui quis saepe ullam vero? Aliquid amet<br> delectus
-                dignissimos doloremque esse explicabo maxime molestiae odio. Voluptate.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, minus. Accusantium aliquid,
-                consectetur consequuntur, debitis dolore doloremque, eaque eius facilis maiores quibusdam rerum <br>sint
-                suscipit tempore velit voluptatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At delectus deserunt error esse expedita qui quis saepe ullam vero? Aliquid amet<br> delectus
-                dignissimos doloremque esse explicabo maxime molestiae odio. Voluptate.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, minus. Accusantium aliquid,
-                consectetur consequuntur, debitis dolore doloremque, eaque eius facilis maiores quibusdam rerum <br>sint
-                suscipit tempore velit voluptatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At delectus deserunt error esse expedita qui quis saepe ullam vero? Aliquid amet<br> delectus
-                dignissimos doloremque esse explicabo maxime molestiae odio. Voluptate.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, minus. Accusantium aliquid,
-                consectetur consequuntur, debitis dolore doloremque, eaque eius facilis maiores quibusdam rerum <br>sint
-                suscipit tempore velit voluptatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At delectus deserunt error esse expedita qui quis saepe ullam vero? Aliquid amet<br> delectus
-                dignissimos doloremque esse explicabo maxime molestiae odio. Voluptate.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, minus. Accusantium aliquid,
-                consectetur consequuntur, debitis dolore doloremque, eaque eius facilis maiores quibusdam rerum <br>sint
-                suscipit tempore velit voluptatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At delectus deserunt error esse expedita qui quis saepe ullam vero? Aliquid amet<br> delectus
-                dignissimos doloremque esse explicabo maxime molestiae odio. Voluptate.</p>
-        </div>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores neque nobis quibusdam quidem quos
+                repudiandae voluptas? Aliquid amet dolores eaque ex in natus perferendis, quia quisquam ratione
+                repellendus tempora voluptas!</p>
+        </section>
     </section>
 </main>
 <footer>
-    <div>
-        <h1>Download By IJSE</h1>
-    </div>
+    <h2>Developed By IJSE</h2>
 </footer>
-
 </body>
 </html>
