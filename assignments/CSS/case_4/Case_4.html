@@ -10,12 +10,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/css/all.min.css">
     <style>
-
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        main > section:first-child{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        main > section:nth-child(2){
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        main > section:nth-child(3){
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        main > section:first-child > div {
+            border: 2px solid red;
+            position: sticky;
+            top: 0;
+        }
+        main > section:nth-child(2)> div {
+            border: 2px solid red;
+            position: sticky;
+            top: 0;
+        }
+        main > section:nth-child(3)> div {
+            border: 2px solid red;
+            position: sticky;
+            top: 0;
+        }
     </style>
 </head>
 <body>
 <main>
-
+    <section>
+        <div><h3>Card 1</h3></div>
+        <h1>Hello</h1>
+    </section>
+    <section>
+        <div><h3>Card 2</h3></div>
+        <h1>Hello</h1>
+    </section>
+    <section>
+        <div><h3>Card 3</h3></div>
+        <h1>Hello</h1>
+    </section>
 </main>
 </body>
 </html>
