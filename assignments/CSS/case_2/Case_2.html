@@ -17,7 +17,6 @@
 
         header {
             background: white;
-            border: 1px solid red;
             box-shadow: 1px 2px 3px black;
             position: relative;
             height: 73px;
@@ -43,48 +42,73 @@
             font-family: 'Poppins', sans-serif;
             color: rgba(46, 41, 41, 0.96);
         }
-        main{
+
+        main {
             position: relative;
         }
 
-        main>nav{
+        main > nav {
             position: absolute;
-            background: #2f0f91;
+            background: #2935bf;
             width: 270px;
             top: 0;
             bottom: 0;
         }
-        main>nav>ul>li{
+
+        main > nav > ul > li {
             color: white;
             list-style: none;
             padding-top: 40px;
             font-size: 19px;
             cursor: pointer;
         }
-        main>nav>ul>li>i{
+
+        main > nav > ul > li > i {
             padding-right: 19px;
         }
 
-        header>nav>ul>li>i{
+        header > nav > ul > li > i {
             padding-right: 19px;
         }
 
-        main>nav>ul>li>a{
+        main > nav > ul > li > a {
+            color: white;
             text-decoration: none;
         }
-        header>nav>ul>li>a{
+
+        header > nav > ul > li > a {
+            color: black;
             text-decoration: none;
         }
-        main>section{
+
+        main ul > li:hover a {
+            color: #08ccf6;
+        }
+
+        main ul > li:hover i {
+            color: #08ccf6;
+        }
+
+        header ul > li:hover a{
+            color: #08ccf6;
+        }
+
+        header ul > li:hover i {
+            color: #08ccf6;
+        }
+
+        main > section {
             margin-left: 280px;
             padding: 10px;
         }
-        footer{
+
+        footer {
             height: 60px;
             background: #b7b0b0;
 
         }
-        footer>h2{
+
+        footer > h2 {
             text-align: center;
             margin-top: 0;
             padding-top: 20px;
