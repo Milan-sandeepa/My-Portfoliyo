@@ -1,0 +1,50 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+header {
+    background: rgba(47, 53, 66, 0.8);
+    box-shadow: 1px 2px 3px black;
+    position: fixed;
+    z-index: 1;
+    height: 75px;
+    width: 100%;
+    top: 0;
+}
+
+header > nav {
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+header > nav > ul {
+    margin-top: 20px;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px;
+}
+main > section:first-child>aside>h2{
+    margin-top: 0;
+}
+main > section:first-child>aside{
+    padding-top: 100px;
+    color: white;
+}
+main > section:first-child {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/background.jpg");
+    background-size: cover;
+}
