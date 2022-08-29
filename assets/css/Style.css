@@ -34,17 +34,22 @@ header > nav > ul > li {
     line-height: 24px;
     padding: 10px;
 }
-main > section:first-child>aside>h2{
+
+main > section:first-child > aside > h2 {
     margin-top: 0;
 }
-main > section:first-child>aside{
-    padding-top: 100px;
-    color: white;
-}
+
 main > section:first-child {
     position: relative;
     width: 100vw;
     height: 100vh;
     background: url("../images/background.jpg");
     background-size: cover;
+}
+
+main > section:first-child > aside {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 50px;
+    color: white;
 }
