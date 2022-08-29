@@ -16,6 +16,14 @@ header {
     top: 0;
 }
 
+header>img{
+    position: absolute;
+    left: 49px;
+    top: 10.68px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
 header > nav {
     position: absolute;
     right: 40px;
