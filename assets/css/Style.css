@@ -269,6 +269,7 @@ main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) {
     height: 362px;
     background: rgba(76, 209, 55, 0.5);
     border-radius: 15px;
+    filter: blur(0.5px);
     color: white;
 }
 
@@ -277,6 +278,7 @@ main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) {
     height: 362px;
     background: rgba(0, 168, 255, 0.5);
     border-radius: 15px;
+    filter: blur(0.5px);
     color: white;
 }
 
@@ -285,6 +287,7 @@ main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) {
     height: 362px;
     background: rgba(232, 65, 24, 0.5);
     border-radius: 15px;
+    filter: blur(0.5px);
     color: white;
 }
 
