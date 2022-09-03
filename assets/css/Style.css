@@ -11,7 +11,7 @@ header {
     box-shadow: 1px 2px 3px black;
     position: fixed;
     z-index: 1;
-    height: 75px;
+    height: 50px;
     width: 100%;
     top: 0;
 }
@@ -19,7 +19,7 @@ header {
 header > img {
     position: absolute;
     left: 49px;
-    top: 10.68px;
+    top: 7px;
     border-radius: 100%;
     object-fit: cover;
 }
@@ -31,7 +31,7 @@ header > nav {
 }
 
 header > nav > ul {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 header > nav > ul > li {
@@ -88,6 +88,7 @@ main > section:first-child > aside > div > img {
     margin-bottom: 6.35px;
     width: 42.86px;
     height: 42.57px;
+    cursor: pointer;
 }
 
 main > section:first-child > aside > div {
