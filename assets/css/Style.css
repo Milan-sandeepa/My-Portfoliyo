@@ -382,21 +382,25 @@ main > section:nth-child(4) > section:nth-child(2) > div {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(1){
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(1)>img{
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(1) > img {
     width: 135px;
     height: 126.36px;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(2){
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(2)>div>h3{
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(2) > div > h3 {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -406,7 +410,8 @@ main > section:nth-child(4) > section:nth-child(2) > div:nth-child(2)>div>h3{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 2px;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(3){
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,7 +421,8 @@ main > section:nth-child(4) > section:nth-child(3) {
     display: flex;
     justify-content: space-evenly;
 }
-main > section:nth-child(4) > section:nth-child(2) > div:nth-child(3)>img{
+
+main > section:nth-child(4) > section:nth-child(2) > div:nth-child(3) > img {
     width: 165.96px;
     height: 150px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -431,18 +437,22 @@ main > section:nth-child(4) > section:nth-child(3) > div {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-main > section:nth-child(4) > section:nth-child(3)>div {
+
+main > section:nth-child(4) > section:nth-child(3) > div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main > section:nth-child(4) > section:nth-child(3)>div:nth-child(1)>img{
+
+main > section:nth-child(4) > section:nth-child(3) > div:nth-child(1) > img {
     width: 120px;
 }
-main > section:nth-child(4) > section:nth-child(3)>div:nth-child(2)>img{
+
+main > section:nth-child(4) > section:nth-child(3) > div:nth-child(2) > img {
     width: 120px;
 }
-main > section:nth-child(4) > section:nth-child(3)>div:nth-child(3)>img{
+
+main > section:nth-child(4) > section:nth-child(3) > div:nth-child(3) > img {
     width: 85px;
     height: 95px;
 }
@@ -459,15 +469,18 @@ main > section:nth-child(4) > div:nth-child(4) {
     box-shadow: 1px 1px 1px rgba(69, 69, 69, 1);
     transform: rotate(0.04deg);
 }
+
 main > section:nth-child(5) {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+
 main > section:nth-child(5) > div:nth-child(1) {
     display: flex;
     justify-content: center;
 }
+
 main > section:nth-child(5) > div:nth-child(1) > h2 {
     margin-top: 88.92px;
     font-family: 'Inter';
@@ -477,12 +490,14 @@ main > section:nth-child(5) > div:nth-child(1) > h2 {
     line-height: 58px;
     color: #FFFFFF;
 }
-main > section:nth-child(5) > section:nth-child(2){
+
+main > section:nth-child(5) > section:nth-child(2) {
     margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
 }
-main > section:nth-child(5) > section:nth-child(2)>div{
+
+main > section:nth-child(5) > section:nth-child(2) > div {
     display: flex;
     justify-content: center;
     width: 337.67px;
@@ -491,16 +506,19 @@ main > section:nth-child(5) > section:nth-child(2)>div{
     background: rgba(217, 217, 217, 0.4);
     border-radius: 10px;
 }
-main > section:nth-child(5) > section:nth-child(2)>div>div>img{
+
+main > section:nth-child(5) > section:nth-child(2) > div > div > img {
     margin-top: 37px;
     width: 284px;
     height: 196px;
 }
-main > section:nth-child(5) > div:nth-child(3){
+
+main > section:nth-child(5) > div:nth-child(3) {
     display: flex;
     justify-content: center;
 }
-main > section:nth-child(5) > div:nth-child(3)>button{
+
+main > section:nth-child(5) > div:nth-child(3) > button {
     width: 199px;
     height: 52px;
     margin-top: 50px;
@@ -515,7 +533,8 @@ main > section:nth-child(5) > div:nth-child(3)>button{
     color: rgba(255, 255, 255, 0.98);
     border: 1px solid #000000;
 }
-main > section:nth-child(5) > div:nth-child(4){
+
+main > section:nth-child(5) > div:nth-child(4) {
     position: absolute;
     width: 90vw;
     height: 0px;
@@ -528,9 +547,39 @@ main > section:nth-child(5) > div:nth-child(4){
     transform: rotate(0.04deg);
 }
 
+main > section:nth-child(6) {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
+main > section:nth-child(6) > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
 
+main > section:nth-child(6) > div:nth-child(1) > h2 {
+    margin-top: 55px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
 
+main > section:nth-child(6) > div:nth-child(3) {
+    position: absolute;
+    width: 90vw;
+    height: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    box-shadow: 1px 1px 1px rgba(69, 69, 69, 1);
+    transform: rotate(0.04deg);
+}
 
 
 
