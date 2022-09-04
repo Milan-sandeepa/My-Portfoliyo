@@ -580,17 +580,21 @@ main > section:nth-child(6) > div:nth-child(3) {
     box-shadow: 1px 1px 1px rgba(69, 69, 69, 1);
     transform: rotate(0.04deg);
 }
+
 main > section:nth-child(7) {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+
 main > section:nth-child(7) > div:nth-child(1) {
     display: flex;
     justify-content: center;
 }
+
 main > section:nth-child(7) > div:nth-child(1) > h2 {
     margin-top: 85px;
+    margin-bottom: 66px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -598,7 +602,8 @@ main > section:nth-child(7) > div:nth-child(1) > h2 {
     line-height: 58px;
     color: #FFFFFF;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside{
+
+main > section:nth-child(7) > section:nth-child(2) > aside {
     position: relative;
     width: 443px;
     height: 632.99px;
@@ -607,13 +612,15 @@ main > section:nth-child(7) > section:nth-child(2)>aside{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>img{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > img {
     margin-left: 38px;
     margin-top: 49px;
     width: 365px;
     height: 254px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>h3{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > h3 {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -623,7 +630,8 @@ main > section:nth-child(7) > section:nth-child(2)>aside>h3{
     margin-left: 53px;
     margin-top: 43px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>p{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -632,7 +640,8 @@ main > section:nth-child(7) > section:nth-child(2)>aside>p{
     color: #FFFFFF;
     margin-left: 53px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>h6{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > h6 {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -641,27 +650,46 @@ main > section:nth-child(7) > section:nth-child(2)>aside>h6{
     color: #FFFFFF;
     margin-left: 53px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>div{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > div {
     display: flex;
     justify-content: center;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>div>img{
+
+main > section:nth-child(7) > section:nth-child(2) > aside > div > img {
     margin-left: 10px;
     margin-right: 10px;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>div>img:nth-child(1){
+
+main > section:nth-child(7) > section:nth-child(2) > aside > div > img:nth-child(1) {
     width: 68px;
     height: 42.57px;
     cursor: pointer;
     margin-left: 0;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>div>img:nth-child(2){
+
+main > section:nth-child(7) > section:nth-child(2) > aside > div > img:nth-child(2) {
     width: 52.86px;
     height: 50.86px;
     cursor: pointer;
 }
-main > section:nth-child(7) > section:nth-child(2)>aside>div>img:nth-child(3){
+
+main > section:nth-child(7) > section:nth-child(2) > aside > div > img:nth-child(3) {
     width: 42.86px;
     height: 45px;
     cursor: pointer;
+}
+main > section:nth-child(7) > section:nth-child(2){
+    position: relative;
+}
+
+main > section:nth-child(7) > section:nth-child(2) > form {
+    position: absolute;
+    right: 171px;
+    top: 0;
+    width: 640px;
+    height: 632.99px;
+    background: rgba(217, 217, 217, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
