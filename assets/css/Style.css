@@ -347,8 +347,23 @@ main > section:nth-child(3) > div:nth-child(3) {
     box-shadow: 1px 1px 1px rgba(69, 69, 69, 1);
     transform: rotate(0.04deg);
 }
-
-
+main > section:nth-child(4) {
+    width: 100vw;
+    height: 100vh;
+}
+main > section:nth-child(4)>section:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+main > section:nth-child(4)>section:nth-child(1)>h2{
+    margin-top: 88.92px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
 
 
 
