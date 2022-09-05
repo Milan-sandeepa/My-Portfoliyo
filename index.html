@@ -6,8 +6,8 @@
 <head><!--document meta data -->
     <meta charset="UTF-8">
     <title>Milan Sandeepa | Official Website</title>
-     <base href="localhost">
-     <meta name="keywords" content="Milan Sandeepa,Milan developments,">
+    <base href="localhost">
+    <meta name="keywords" content="Milan Sandeepa,Milan developments,">
     <meta name="description" content="This is a My-Portfoliyo Website">
     <meta name="author" content="Portfoliyo Website">
     <meta name="owner" content="Milan Sandeepa">
@@ -21,7 +21,7 @@
 </head>
 <body><!--sectioning root-->
 <header>
-    <img src="assets/images/profile.jpg" alt="profile" width="40px" height="40px" >
+    <img src="assets/images/profile.jpg" alt="profile" width="40px" height="40px">
     <nav>
         <ul>
             <li>HOME</li>
@@ -41,18 +41,18 @@
             <h2>Full-Stack Developer</h2>
             <h3>FIND WITH ME</h3>
             <div>
-                <img src="assets/images/GitHub.png" alt="profile" >
-                <img src="assets/images/img.png" alt="profile"   >
-                <img src="assets/images/instagram.png" alt="profile"   >
+                <img src="assets/images/GitHub.png" alt="profile">
+                <img src="assets/images/img.png" alt="profile">
+                <img src="assets/images/instagram.png" alt="profile">
             </div>
         </aside>
-        <img src="assets/images/profile.jpg" alt="profile" width="447px" height="437px" >
+        <img src="assets/images/profile.jpg" alt="profile" width="447px" height="437px">
         <div></div>
     </section><!--Home Section end-->
 
     <section><!--ABOUT ME Section Start-->
         <div>
-            <h2>About <span style="color: #F86565">Me</span> </h2>
+            <h2>About <span style="color: #F86565">Me</span></h2>
         </div>
         <section>
             <article>
@@ -196,20 +196,55 @@
                     Email: glmsandeepa@gmail.com</p>
                 <h6>FIND WITH ME</h6>
                 <div>
-                    <img src="assets/images/GitHub.png" alt="profile" >
-                    <img src="assets/images/img.png" alt="profile"   >
-                    <img src="assets/images/instagram.png" alt="profile"   >
+                    <img src="assets/images/GitHub.png" alt="profile">
+                    <img src="assets/images/img.png" alt="profile">
+                    <img src="assets/images/instagram.png" alt="profile">
                 </div>
             </aside>
-            <form>
-
+            <form action="contact" method="post">
+                <div>
+                    <div class="contactDetails">
+                        <lable>YOUR NAME</lable>
+                        <br>
+                        <input type="text" id="clientName" placeholder="Enter Your Name" required="">
+                    </div>
+                    <div class="contactDetails">
+                        <lable>PHONE NUMBER</lable>
+                        <br>
+                        <input type="text" id="phone" placeholder="Enter Your Number" required="">
+                    </div>
+                </div>
+                <div>
+                    <div class="contactDetails">
+                        <lable>EMAIL</lable>
+                        <br>
+                        <input type="email" id="clientEmail" placeholder="Email" required="">
+                    </div>
+                    <div class="contactDetails">
+                        <lable>SUBJECT</lable>
+                        <br>
+                        <input type="text" id="clientSubject" placeholder="Subject" required="">
+                    </div>
+                </div>
+                <div>
+                    <div class="contactDetails">
+                        <lable>YOUR MESSAGE</lable>
+                        <br>
+                        <textarea name="message" id="clientMsg" placeholder="Text Here" required=""></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="button">Send Message</button>
+                </div>
             </form>
         </section>
         <div></div>
     </section><!--CONTACT Section end-->
 </main>
 <footer>
-    <p style="text-align: center"  >© 2022. All rights reserved by Milan Sandeepa.</p>
+    <div></div>
+    <img src="assets/images/profile.jpg" alt="profile" width="55px" height="55px">
+    <p style="text-align: center">© 2022. All rights reserved by Milan Sandeepa.</p>
 </footer>
 </body>
 </html>
