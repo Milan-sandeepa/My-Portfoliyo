@@ -250,6 +250,7 @@ main > section:nth-child(3) > section:nth-child(1) {
 
 main > section:nth-child(3) > section:nth-child(1) > h2 {
     margin-top: 82px;
+    margin-bottom: 85px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -482,7 +483,7 @@ main > section:nth-child(5) > div:nth-child(1) {
 }
 
 main > section:nth-child(5) > div:nth-child(1) > h2 {
-    margin-top: 88.92px;
+    margin-top: 55px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
