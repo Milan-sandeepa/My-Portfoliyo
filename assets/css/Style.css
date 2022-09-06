@@ -684,6 +684,7 @@ main > section:nth-child(7) > section:nth-child(2){
     /*position: relative;*/
     display: flex;
     justify-content: space-around;
+    margin-right: 60px;
 }
 
 main > section:nth-child(7) > section:nth-child(2) > form {
