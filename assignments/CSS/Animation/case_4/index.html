@@ -8,12 +8,50 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="assets/fonts/css/all.min.css">
     <style>
+        main>section{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        main>section>img{
+            width: 400px;
+            height: 200px;
+            position: fixed;
+        }
 
+        #wheels>img:nth-child(1){
+            position: absolute;
+            top: 85px;
+            left: 233px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 70px;
+            height: 72px;
+        }
+        #wheels>img:nth-child(2){
+            position: absolute;
+            top: 86px;
+            left: 0;
+            right: 256px;
+            bottom: 0;
+            margin: auto;
+            width: 70px;
+            height: 72px;
+        }
     </style>
 </head>
 <body>
 <main>
-
+    <div id="wheels">
+        <img src="assets/img/wheel.png" alt="car">
+        <img src="assets/img/wheel.png" alt="car">
+    </div>
+    <section>
+        <img src="assets/img/car.png" alt="car">
+    </section>
 </main>
 
 </body>
