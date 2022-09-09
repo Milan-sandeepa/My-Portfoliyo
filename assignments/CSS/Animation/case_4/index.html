@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="assets/fonts/css/all.min.css">
     <style>
-        main{
+        main {
             width: 100%;
             height: 100vh;
             background-image: url("assets/img/sky.jpg");
@@ -17,12 +17,14 @@
             position: relative;
             overflow-x: hidden;
         }
-        main>section{
+
+        main > section {
             position: relative;
             width: 100vw;
             height: 100vh;
         }
-        main>section>img{
+
+        main > section > img {
             width: 400px;
             height: 200px;
             position: absolute;
@@ -34,7 +36,7 @@
             z-index: 3;
         }
 
-        #wheels>img:nth-child(1){
+        #wheels > img:nth-child(1) {
             position: absolute;
             top: 465px;
             left: 233px;
@@ -45,7 +47,8 @@
             height: 70px;
             z-index: 4;
         }
-        #wheels>img:nth-child(2){
+
+        #wheels > img:nth-child(2) {
             position: absolute;
             top: 465px;
             left: 0;
@@ -57,17 +60,17 @@
             z-index: 4;
         }
 
-        #wheels>img{
+        #wheels > img {
             animation: wheel 2s infinite;
         }
 
         @keyframes wheel {
-            100%{
+            100% {
                 transform: rotate(360deg);
             }
         }
 
-        #road{
+        #road {
             width: 500%;
             height: 200px;
             background-image: url("assets/img/road.jpg");
@@ -79,7 +82,14 @@
             background-repeat: repeat-x;
             animation: road 5s linear infinite;
         }
-        #city{
+
+        @keyframes road {
+            100% {
+                transform: translateX(-3400px);
+            }
+        }
+
+        #city {
             width: 500%;
             height: 200px;
             background-image: url("assets/img/city.png");
@@ -90,6 +100,12 @@
             z-index: 1;
             background-repeat: repeat-x;
             animation: city 20s linear infinite;
+        }
+
+        @keyframes city {
+            100% {
+                transform: translateX(-1400px);
+            }
         }
     </style>
 </head>
