@@ -649,6 +649,109 @@ main > section:nth-child(6) > div:nth-child(1) > h2 {
     height: 0px;
     border: 4px solid #4CD137;
 }
+.secondary>h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+}
+.secondary>h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.secondary>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.higher>h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.higher>h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.higher>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.primary>h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.primary>h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.primary>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
 main > section:nth-child(6) > div:nth-child(3) {
     position: absolute;
     width: 90vw;
@@ -661,7 +764,6 @@ main > section:nth-child(6) > div:nth-child(3) {
     box-shadow: 1px 1px 1px rgba(69, 69, 69, 1);
     transform: rotate(0.04deg);
 }
-
 main > section:nth-child(7) {
     position: relative;
     width: 100vw;
