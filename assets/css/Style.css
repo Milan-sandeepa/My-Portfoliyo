@@ -41,7 +41,7 @@ header > nav > ul > li {
     display: inline-block;
     list-style: none;
     color: #FFFFFF;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
