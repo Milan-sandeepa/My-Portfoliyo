@@ -47,7 +47,14 @@ header > nav > ul > li {
     line-height: 24px;
     padding: 10px;
 }
+header > nav > ul > li>a{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
 
+    color: #FFFFFF;
+    text-decoration: none;
+}
 main > section:first-child {
     position: relative;
     width: 100vw;
