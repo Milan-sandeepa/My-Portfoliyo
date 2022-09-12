@@ -1406,7 +1406,7 @@ footer > p {
 
     main > section:nth-child(5) > section:nth-child(2) > div > div > img {
         margin-top: 25px;
-        width: 200px;
+        width: 280px;
         height: 150px;
     }
 
@@ -1418,6 +1418,33 @@ footer > p {
     }
     main > section:nth-child(5) > div:nth-child(3) > button {
         margin-top: 28px;
+    }
+    #education-lines {
+        display: none;
+    }
+
+    .higher {
+        width: 355px;
+        height: 150px;
+        top: 200px;
+        right: 9px;
+    }
+
+    .secondary {
+        width: 355px;
+        height: 150px;
+        bottom: 0;
+        top: 0px;
+        left: 10px;
+        margin: auto;
+    }
+
+    .primary {
+        width: 355px;
+        height: 150px;
+        bottom: 200px;
+        right: 10px;
+        margin: auto;
     }
 }
 
