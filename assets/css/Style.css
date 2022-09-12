@@ -1162,6 +1162,57 @@ footer > p {
         right: 10px;
         margin: auto;
     }
+    main > section:nth-child(7) > section:nth-child(2) {
+        display: block;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > aside {
+        width: 300px;
+        height: 380px;
+        padding-top: 1px;
+        margin-left: 10px;
+        left: 0;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > aside > img {
+        display: none;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > aside > h3 {
+        font-size: 24px;
+        margin-left: 37px;
+        margin-top: 61px;
+    }
+    main > section:nth-child(7) > div:nth-child(1) > h2 {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > form {
+        width: 300px;
+        height: 660.99px;
+        margin-left: 10px;
+    }
+    main > section:nth-child(7) > section:nth-child(2) {
+        margin-right: 0px;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > form > div {
+        display: block;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > form > div >div {
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+    #clientMsg {
+        width: 250px;
+        height: 160px;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > form > div:nth-child(1) {
+        padding-top: 15px;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > form > div:nth-child(4) > button {
+        margin-top: 13px;
+        margin-left: 50px;
+    }
+    footer {
+        height: 30vh;
+    }
 }
 
 @media all and (min-width: 320px) and (max-width: 375px) {
