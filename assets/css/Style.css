@@ -224,7 +224,19 @@ main > section:nth-child(2) > div:nth-child(3) > button {
     border: 1px solid #000000;
     cursor: pointer;
 }
-
+main > section:nth-child(2) > div:nth-child(3) > button>a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.98);
+}
+main > section:nth-child(2) > div:nth-child(3) > button:hover{
+    background: rgba(189, 186, 6, 0.69);
+    width: 210px;
+    transition-property: width;
+    transition-duration: 1s;
+}
 main > section:nth-child(2) > div:nth-child(4) {
     position: absolute;
     width: 90vw;
