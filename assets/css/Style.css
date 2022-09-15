@@ -1130,9 +1130,7 @@ footer > p {
 }
 
 @media all and (max-width: 600px) {
-    #navbar {
-        border: 1px solid red;
-    }
+
 }
 
 @media all and (max-width: 400px) {
@@ -1154,11 +1152,12 @@ footer > p {
     }
 
     main > section:first-child > img {
-        right: 10px;
-        width: 378px;
-        height: 418px;
-        top: 126px;
-        border-radius: 55px;
+        display: none;
+        /*right: 10px;*/
+        /*width: 378px;*/
+        /*height: 418px;*/
+        /*top: 126px;*/
+        /*border-radius: 55px;*/
     }
 
     main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) {
