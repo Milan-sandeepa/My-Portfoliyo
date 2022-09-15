@@ -1149,6 +1149,10 @@ footer > p {
     main > section:first-child > aside {
         /*margin-left: 19px;*/
         bottom: 77px;
+        top: 285px;
+    }
+    main > section:first-child > aside > h2 {
+        margin-top: 28px;
     }
 
     main > section:first-child > img {
