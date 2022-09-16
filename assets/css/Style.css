@@ -1011,6 +1011,8 @@ footer > p {
 
     color: #FFFFFF;
 }
+
+/*media Queries*/
 @media all and (min-width: 1536px){
     main > section:first-child > aside {
         top: 201px;
@@ -1078,6 +1080,9 @@ footer > p {
     main > section:nth-child(2) > section:nth-child(2) > div {
         margin-right: 150px;
     }
+    #clientMsg {
+        width: 83%;
+    }
     /*.right-line-1 {*/
     /*    top: 177px;*/
     /*}*/
@@ -1114,16 +1119,95 @@ footer > p {
     footer {
         margin-top: 220px;
     }
+    main > section:first-child > aside > h2 {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    main > section:first-child > aside > h1 {
+        font-size: 40px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) {
+        width: 340px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) {
+        width: 340px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) {
+        width: 340px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1)>h3 {
+        font-size: 22px;
+        left: -18px;
+        top: 92px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2)>h3 {
+        font-size: 22px;
+        left: -18px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3)>h3 {
+        font-size: 22px;
+        left: -18px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) > p {
+        font-size: 12px;
+        left: 45px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) > p {
+        font-size: 12px;
+        left: 45px;
+    }
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) > p {
+        font-size: 12px;
+        left: 45px;
+    }
+    #clientMsg {
+        width: 86%;
+    }
 }
 
-@media all and (max-width: 1060px) {
+@media all and (max-width: 1185px) {
+    main > section:nth-child(4) > section:nth-child(2) > div {
+        width: 30%;
+    }
+    main > section:nth-child(4) > section:nth-child(3) > div {
+        width: 30%;
+    }
+    #clientName, #phone, #clientEmail, #clientSubject {
+        width: 75%;
+    }
+    #clientMsg {
+        width: 91%;
+    }
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 1137px) {
+    main > section:first-child > img {
+        left: 50px;
+    }
+    .contactDetails {
+        margin-left: 15px;
+    }
+    #clientMsg {
+        width: 86%;
+    }
 }
 
-@media all and (max-width: 768px) {
-
+@media all and (max-width: 1088px) {
+    main > section:first-child > aside {
+        top: 2px;
+    }
+    main > section:first-child > img {
+        left: 80px;
+    }
+    main > section:first-child > aside > h1 {
+        font-size: 30px;
+    }
+    main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) {
+        margin-left: 45px;
+    }
+    main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) > h2 {
+        font-size: 35px;
+    }
 }
 
 @media all and (max-width: 700px) {
@@ -1156,7 +1240,6 @@ footer > p {
     }
 
     main > section:first-child > img {
-        display: none;
         /*right: 10px;*/
         /*width: 378px;*/
         /*height: 418px;*/
