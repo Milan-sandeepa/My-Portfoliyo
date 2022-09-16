@@ -595,22 +595,26 @@ main > section:nth-child(6) > div:nth-child(1) > h2 {
     border-radius: 15px;
 
 }
-.edu{
+
+.edu {
     display: flex;
     justify-content: center;
     height: 75%;
 }
-#secondary-wrap{
+
+#secondary-wrap {
     display: flex;
     justify-content: center;
     flex-direction: column;
 
 }
-#right-wrap{
+
+#right-wrap {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
 .higher {
     width: 440px;
     height: 128px;
@@ -627,11 +631,13 @@ main > section:nth-child(6) > div:nth-child(1) > h2 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-#education-lines{
+
+#education-lines {
     display: flex;
     justify-content: center;
     width: 85px;
 }
+
 .main-line {
     position: relative;
     right: 1px;
@@ -648,21 +654,25 @@ main > section:nth-child(6) > div:nth-child(1) > h2 {
     height: 0px;
     border: 4px solid #4CD137;
 }
-#left-lines{
+
+#left-lines {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-#main-lines{
+
+#main-lines {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-#right-lines{
+
+#right-lines {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
+
 .right-line-1 {
     position: relative;
     right: 233px;
@@ -937,7 +947,8 @@ main > section:nth-child(7) > section:nth-child(2) > form > div {
     padding-top: 10px;
     outline: none;
 }
-.contactMassage{
+
+.contactMassage {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1013,61 +1024,98 @@ footer > p {
 }
 
 /*media Queries*/
-@media all and (min-width: 1536px){
+@media all and (min-width: 1536px) {
     main > section:first-child > aside {
         top: 201px;
         left: 65px;
     }
+
     main > section:first-child > img {
         position: relative;
         top: 214px;
         left: 280px;
     }
+
+    header > nav > ul {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        left: 32px;
+        position: relative;
+    }
+
+    header > nav > ul > li > a {
+        font-size: 18px;
+    }
 }
 
-@media all and (max-width: 1486px){
+@media all and (max-width: 1486px) {
+    header > nav > ul {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        left: 32px;
+        position: relative;
+    }
+
+    header > nav > ul > li > a {
+        font-size: 18px;
+    }
+
     main > section:nth-child(2) > div {
         height: 20%;
     }
+
     main > section:nth-child(2) > div:nth-child(3) > button {
         margin-top: 30px;
     }
+
     main > section:nth-child(3) > section:nth-child(1) {
         height: 20%;
     }
+
     main > section:nth-child(3) > section:nth-child(1) > h2 {
         margin-top: 30px;
     }
+
     main > section:nth-child(4) > section:nth-child(1) {
         height: 20%;
     }
+
     main > section:nth-child(4) > section:nth-child(1) > h2 {
         margin-top: 33.92px;
     }
+
     main > section:nth-child(4) > section:nth-child(3) > div {
         margin-top: 15px;
     }
+
     main > section:nth-child(5) > div:nth-child(1) {
         height: 20%;
     }
+
     main > section:nth-child(5) > div:nth-child(1) > h2 {
         margin-top: 35px;
     }
+
     main > section:nth-child(5) > section:nth-child(2) {
         margin-top: 0px;
     }
+
     main > section:nth-child(5) > div:nth-child(3) > button {
         margin-top: 28px;
     }
+
     main > section:nth-child(6) > div:nth-child(1) {
         height: 20%;
     }
+
     main > section:nth-child(6) > div:nth-child(1) > h2 {
         margin-top: 20px;
     }
+
     main > section:nth-child(7) > div:nth-child(1) {
         height: 20%;
     }
+
     main > section:nth-child(7) > div:nth-child(1) > h2 {
         margin-top: 28px;
     }
@@ -1077,12 +1125,15 @@ footer > p {
     main > section:first-child > img {
         left: 100px;
     }
+
     main > section:nth-child(2) > section:nth-child(2) > div {
         margin-right: 150px;
     }
+
     #clientMsg {
         width: 83%;
     }
+
     /*.right-line-1 {*/
     /*    top: 177px;*/
     /*}*/
@@ -1112,56 +1163,81 @@ footer > p {
     main > section:nth-child(2) > section:nth-child(2) > div {
         margin-right: 50px;
     }
+
     main > section:nth-child(7) > section:nth-child(2) > aside > img {
         width: 50%;
         height: 20%;
     }
+
     footer {
         margin-top: 220px;
     }
+
     main > section:first-child > aside > h2 {
         margin-top: 30px;
         font-size: 20px;
     }
+
     main > section:first-child > aside > h1 {
         font-size: 40px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) {
         width: 340px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) {
         width: 340px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) {
         width: 340px;
     }
-    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1)>h3 {
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) > h3 {
         font-size: 22px;
         left: -18px;
         top: 92px;
     }
-    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2)>h3 {
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) > h3 {
         font-size: 22px;
         left: -18px;
     }
-    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3)>h3 {
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) > h3 {
         font-size: 22px;
         left: -18px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) > p {
         font-size: 12px;
         left: 45px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) > p {
         font-size: 12px;
         left: 45px;
     }
+
     main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) > p {
         font-size: 12px;
         left: 45px;
     }
+
     #clientMsg {
         width: 86%;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > form {
+        width: 50%;
+    }
+    main > section:nth-child(2) > section:nth-child(2) > div > p {
+        font-size: 20px;
+        margin-left: 41px;
+        margin-top: 97px;
+        margin-right: 18px;
+        margin-bottom: 75px;
     }
 }
 
@@ -1169,12 +1245,15 @@ footer > p {
     main > section:nth-child(4) > section:nth-child(2) > div {
         width: 30%;
     }
+
     main > section:nth-child(4) > section:nth-child(3) > div {
         width: 30%;
     }
+
     #clientName, #phone, #clientEmail, #clientSubject {
         width: 75%;
     }
+
     #clientMsg {
         width: 91%;
     }
@@ -1184,9 +1263,11 @@ footer > p {
     main > section:first-child > img {
         left: 50px;
     }
+
     .contactDetails {
         margin-left: 15px;
     }
+
     #clientMsg {
         width: 86%;
     }
@@ -1196,25 +1277,164 @@ footer > p {
     main > section:first-child > aside {
         top: 2px;
     }
+
     main > section:first-child > img {
         left: 80px;
     }
+
     main > section:first-child > aside > h1 {
         font-size: 30px;
     }
+
     main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) {
         margin-left: 45px;
     }
+
     main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) > h2 {
         font-size: 35px;
     }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 1014px) {
+    main > section:nth-child(2) > section:nth-child(2) > div {
+        margin-right: 16px;
+    }
+
+    main > section:nth-child(2) > div:nth-child(3) > button {
+        margin-top: 30px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) {
+        width: 250px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) {
+        width: 250px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) {
+        width: 250px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) > h3 {
+        font-size: 19px;
+        left: 30px;
+        top: 44px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) > h3 {
+        font-size: 19px;
+        left: -20px;
+        top: 100px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) > h3 {
+        font-size: 19px;
+        left: -20px;
+        top: 100px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) > p {
+        left: 30px;
+        top: 50px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) > p {
+        left: 8px;
+        top: 110px;
+    }
+
+    main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) > p {
+        left: 30px;
+        top: 110px;
+    }
+
+    main > section:nth-child(5) > section:nth-child(2) > div {
+        width: 300px;
+        height: 342px;
+    }
+
+    main > section:nth-child(5) > section:nth-child(2) > div > div > img {
+        margin-top: 45px;
+        width: 250px;
+        height: 190px;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > aside > h3 {
+        margin-left: 25px;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > aside > p {
+        margin-left: 25px;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > aside > h6 {
+        margin-left: 25px;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > aside {
+        margin-left: -20px;
+    }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 981px) {
+    header > nav > ul {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        left: 32px;
+        position: relative;
+    }
 
+    header > nav > ul > li > a {
+        font-size: 15px;
+    }
+
+    main > section:nth-child(2) > div:nth-child(3) > button {
+        margin-top: 0px;
+    }
+
+    main > section:first-child > img {
+        left: 65px;
+    }
+
+    main > section:first-child > img {
+        left: 50px;
+        width: 300px;
+        height: 300px;
+        top: 250px;
+    }
+
+    main > section:first-child > aside {
+        top: 80px;
+        left: 80px;
+    }
+
+    .secondary {
+        width: 375px;
+    }
+
+    .higher {
+        width: 375px;
+    }
+
+    .primary {
+        width: 375px;
+    }
+
+    main > section:nth-child(7) > section:nth-child(2) > aside {
+        width: 30%;
+        margin-left: -20px;
+    }
+}
+
+@media all and (max-width: 921px) {
+    main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) {
+        width: 43%;
+    }
+    main > section:nth-child(2) > section:nth-child(2) > article:nth-child(1) > p {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 @media all and (max-width: 400px) {
@@ -1235,6 +1455,7 @@ footer > p {
         bottom: 77px;
         top: 285px;
     }
+
     main > section:first-child > aside > h2 {
         margin-top: 28px;
     }
