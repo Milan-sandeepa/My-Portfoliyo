@@ -288,27 +288,24 @@ main > section:nth-child(3) > section:nth-child(2) {
 main > section:nth-child(3) > section:nth-child(2) > div:nth-child(1) {
     width: 420px;
     height: 362px;
-    background: rgba(76, 209, 55, 0.5);
+    background: rgba(15, 190, 243, 0.97);
     border-radius: 15px;
-    filter: blur(0.5px);
     color: white;
 }
 
 main > section:nth-child(3) > section:nth-child(2) > div:nth-child(2) {
     width: 420px;
     height: 362px;
-    background: rgba(0, 168, 255, 0.5);
+    background: rgba(230, 0, 255, 0.9);
     border-radius: 15px;
-    filter: blur(0.5px);
     color: white;
 }
 
 main > section:nth-child(3) > section:nth-child(2) > div:nth-child(3) {
     width: 420px;
     height: 362px;
-    background: rgba(232, 65, 24, 0.5);
+    background: rgba(241, 196, 15, 0.86);
     border-radius: 15px;
-    filter: blur(0.5px);
     color: white;
 }
 
