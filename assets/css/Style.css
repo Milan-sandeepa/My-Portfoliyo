@@ -1621,7 +1621,7 @@ footer > p {
         left: 35px;
     }
     main > section:first-child > aside {
-        left: -95px;
+        left: -30px;
     }
     main > section:first-child > aside > h1 {
         font-size: 25px;
@@ -2264,7 +2264,7 @@ footer > p {
 @media all and (max-width: 380px) {
     main > section:first-child > aside {
         top: 100px;
-        left: 22px;
+        left: 0px;
     }
     main > section:first-child > img {
         width: 260px;
