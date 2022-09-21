@@ -1,3 +1,8 @@
+body{
+background: #f2edf3;
+}
+/*login page Styles Start*/
+
 .card{
     left: 0;
     right: 0;
@@ -19,3 +24,21 @@
     width: 80px;
     height: 80px;
 }
+/*login page Styles end*/
+
+/*dashboard styles Started*/
+
+.dash-col{
+    height: 200px;
+}
+.dash-2col{
+    height: 150px;
+    align-items: center;
+    margin-top: 10px;
+    background:  #fff;
+}
+.table-style{
+    background:  #fff;
+}
+
+/*dashboard styles End*/
