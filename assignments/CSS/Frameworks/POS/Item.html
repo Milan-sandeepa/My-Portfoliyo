@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <title>Item</title>
+</head>
+<body>
+<!--navbar start-->
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">POS Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="#">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Place Order</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="#">Orders</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="#"><i class="fa-solid fa-user"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light " href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navbar end-->
+
+<main class="container-fluid">
+    <section class="row">
+        <div class="col-6 mt-5 ">
+           <div class=" bg-light border rounded-3 p-4">
+               <div>
+                   <h4>Items</h4>
+                   <div class="col mt-2 table-responsive">
+                       <table class="table table-bordered table-hover">
+                           <thead>
+                           <tr>
+                               <th scope="col">Item Code</th>
+                               <th scope="col">Item Name</th>
+                               <th scope="col">Item Qty</th>
+                               <th scope="col">Item Price</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Bag</td>
+                               <td>100</td>
+                               <td>$100</td>
+                           </tr>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Phone</td>
+                               <td>100</td>
+                               <td>$1000</td>
+                           </tr>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Shoes</td>
+                               <td>100</td>
+                               <td>$160</td>
+                           </tr>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Book</td>
+                               <td>100</td>
+                               <td>$100</td>
+                           </tr>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Bag</td>
+                               <td>100</td>
+                               <td>$100</td>
+                           </tr>
+                           <tr>
+                               <th scope="row">I-0123</th>
+                               <td>Bag</td>
+                               <td>100</td>
+                               <td>$100</td>
+                           </tr>
+                           </tbody>
+                       </table>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="col-6 mt-5">
+            <div class=" bg-light border rounded-3  p-4">
+                <div>
+                    <div>
+                        <h1 class="mb-4">Add Item</h1>
+                        <div>
+                            <div class="form-group ms-2 me-2">
+                                <label for="itemCode">Item Code</label>
+                                <input class="form-control" id="itemCode" type="text">
+                                <span class="control-error" id="lblCode"></span>
+                            </div>
+                            <div class="form-group ms-2 me-2">
+                                <label for="itemName">Item Name</label>
+                                <input class="form-control" id="itemName" type="text">
+                                <span class="control-error" id="lblname"></span>
+                            </div>
+                            <div class="form-group ms-2 me-2">
+                                <label for="itemQty">Item Qty</label>
+                                <input class="form-control" id="itemQty" type="text">
+                                <span class="control-error" id="lblqty"></span>
+                            </div>
+                            <div class="form-group ms-2 me-2">
+                                <label for="itemPrice">Unit Price</label>
+                                <input class="form-control" id="itemPrice" type="text">
+                                <span class="control-error" id="lblprice"></span>
+                            </div>
+                        </div>
+                            <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" id="btnItem">Add Item</button>
+                            <button class="btn btn-danger mt-3 col-12  col-sm-3 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>
+                            <button class="btn btn-warning mt-3 col-12 c col-sm-3 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>
+                            <button class="btn btn-success mt-3 col-12  col-sm-3 col-md-3 col-xl-2">Get All</button>
+                            <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
