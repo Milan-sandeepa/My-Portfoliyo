@@ -1,4 +1,1 @@
-#My-Portfoliyo
-site map :
-wireframe :
-mockup :
+# My-portfoliyo
