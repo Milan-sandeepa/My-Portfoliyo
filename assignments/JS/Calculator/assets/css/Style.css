@@ -1,0 +1,23 @@
+body{
+    background: #041f45;
+
+}
+main{
+    width: 100%;
+}
+#calsection{
+    height: 100vh;
+}
+#calinput{
+    width: 350px;
+    height: 100px;
+    font-size: 70px;
+    outline: none;
+    border: none;
+    background: #ffffff;
+}
+.btn{
+    font-size: 40px;
+    margin: 2px;
+    background: #dfe6e9;
+}
