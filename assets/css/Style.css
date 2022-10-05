@@ -626,10 +626,15 @@ main > section:nth-child(6) > section:nth-child(2) > div {
     border-radius: 10px;
 }
 
-main > section:nth-child(6) > section:nth-child(2) > div > div > img {
+main > section:nth-child(6) > section:nth-child(2) > div > div >a> img {
     margin-top: 37px;
     width: 284px;
     height: 196px;
+}
+
+main > section:nth-child(6) > section:nth-child(2) > div > div > div>a {
+    text-decoration: none;
+    color: white;
 }
 
 main > section:nth-child(6) > div:nth-child(3) {
