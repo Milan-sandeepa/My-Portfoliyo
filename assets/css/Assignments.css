@@ -93,12 +93,12 @@ header > nav > ul > li > a:hover {
     background-size: cover;
 }
 
-#div-1{
+.div-1{
     padding-top: 70px;
     color: white;
 }
 
-#title-1{
+.title-1{
     display: inline-block;
     margin-left: 50px;
 }
@@ -126,4 +126,11 @@ header > nav > ul > li > a:hover {
 .wrapper>a{
     text-decoration: none;
     color: white;
+}
+
+#section-2{
+    width: 100vw;
+    height: 753.6px;
+    background: url("../images/background.jpg");
+    background-size: cover;
 }
