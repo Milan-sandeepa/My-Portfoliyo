@@ -141,3 +141,17 @@ header > nav > ul > li > a:hover {
     background: url("../images/background.jpg");
     background-size: cover;
 }
+
+#section-4{
+    width: 100vw;
+    height: 753.6px;
+    background: url("../images/background.jpg");
+    background-size: cover;
+}
+
+#section-5{
+    width: 100vw;
+    height: 753.6px;
+    background: url("../images/background.jpg");
+    background-size: cover;
+}
