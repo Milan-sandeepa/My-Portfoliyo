@@ -21,7 +21,7 @@ header {
     top: 0;
 }
 
-header > img {
+header > a>img {
     position: absolute;
     left: 49px;
     top: 7px;
@@ -648,7 +648,7 @@ main > section:nth-child(6) > div:nth-child(3) {
     justify-content: center;
 }
 
-main > section:nth-child(6) > div:nth-child(3) > button {
+main > section:nth-child(6) > div:nth-child(3) > a>button {
     width: 199px;
     height: 52px;
     margin-top: 50px;
@@ -660,6 +660,7 @@ main > section:nth-child(6) > div:nth-child(3) > button {
     line-height: 24px;
     color: rgba(255, 255, 255, 0.98);
     border: 1px solid #000000;
+    cursor: pointer;
 }
 
 main > section:nth-child(6) > div:nth-child(4) {
@@ -2376,6 +2377,7 @@ footer > p {
 
 
 
+/*------------------------------------Assignments Page Css-------------------------------------------------*/
 
 
 
