@@ -47,19 +47,78 @@
 <!--navbar end-->
 
 <main class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-6">
+            <h4>Product List</h4>
+            <p>Manage your products</p>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn h-75 mt-1 col-12 col-sm-6 col-md-6 col-xl-4" data-bs-toggle="modal" data-bs-target="#itemAddModal" style="background: #FF9F43;color: white;" >+ Add Item</button>
+        </div>
+    </div>
+
+    <!--Add Item Modal -->
+    <div class="modal fade" id="itemAddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemCode">Item Code</label>
+                            <input class="form-control" id="itemCode" type="text">
+                            <span class="control-error" id="lblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemName">Item Name</label>
+                            <input class="form-control" id="itemName" type="text">
+                            <span class="control-error" id="lblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemQty">Item Qty</label>
+                            <input class="form-control" id="itemQty" type="text">
+                            <span class="control-error" id="lblqty"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemPrice">Unit Price</label>
+                            <input class="form-control" id="itemPrice" type="text">
+                            <span class="control-error" id="lblprice"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="btnItem">Add</button>
+<!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
+<!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
+<!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
+<!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Item Modal end-->
+
     <section class="row">
-        <div class="col-6 mt-5 ">
+        <div class="col-12 col-xl-12 mt-3 ">
            <div class=" bg-light border shadow rounded-3 p-4">
                <div>
-                   <h4 class="mb-4">Items</h4>
-                   <div class="col mt-2 table-responsive">
-                       <table class="table table-bordered table-hover">
+                   <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
+                       <i class="fa-solid fa-magnifying-glass" id="seachIcon"></i>
+                       <input class="form-control" type="text" placeholder="Search.." id="searchInput">
+                   </div>
+                   <div class="col mt-2 table-responsive p-3">
+                       <table class="table  table-hover">
                            <thead>
-                           <tr>
+                           <tr class="table-primary">
                                <th scope="col">Item Code</th>
                                <th scope="col">Item Name</th>
                                <th scope="col">Item Qty</th>
                                <th scope="col">Item Price</th>
+                               <th scope="col">Action</th>
                            </tr>
                            </thead>
                            <tbody>
@@ -68,78 +127,13 @@
                                <td>Bag</td>
                                <td>100</td>
                                <td>$100</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Phone</td>
-                               <td>100</td>
-                               <td>$1000</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Shoes</td>
-                               <td>100</td>
-                               <td>$160</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Book</td>
-                               <td>100</td>
-                               <td>$100</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Bag</td>
-                               <td>100</td>
-                               <td>$100</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Bag</td>
-                               <td>100</td>
-                               <td>$100</td>
+                               <td>X</td>
                            </tr>
                            </tbody>
                        </table>
                    </div>
                </div>
            </div>
-        </div>
-        <div class="col-6 mt-5">
-            <div class=" bg-light border shadow rounded-3  p-4">
-                <div>
-                    <div>
-                        <h1 class="mb-4">Add Item</h1>
-                        <div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemCode">Item Code</label>
-                                <input class="form-control" id="itemCode" type="text">
-                                <span class="control-error" id="lblCode"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemName">Item Name</label>
-                                <input class="form-control" id="itemName" type="text">
-                                <span class="control-error" id="lblname"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemQty">Item Qty</label>
-                                <input class="form-control" id="itemQty" type="text">
-                                <span class="control-error" id="lblqty"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemPrice">Unit Price</label>
-                                <input class="form-control" id="itemPrice" type="text">
-                                <span class="control-error" id="lblprice"></span>
-                            </div>
-                        </div>
-                            <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" id="btnItem">Add</button>
-                            <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>
-                            <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>
-                            <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>
-                            <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </main>
