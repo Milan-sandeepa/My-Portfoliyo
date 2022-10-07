@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="../index.html">Dashboard</a>
+                    <a class="nav-link active text-light" aria-current="page" href="Dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link text-light" href="Item.html">Items</a>
@@ -47,7 +47,7 @@
 <!--navbar end-->
 <main class="container-fluid">
     <section class="row mt-5 ">
-        <div class="dash-col col-sm-6 col-xl-3  ">
+        <div class="dash-col col-sm-6 col-xl-3  ps-0" id="card-1">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa fa-chart-line fa-3x text-primary"></i>
                 <div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="dash-col col-sm-6 col-xl-3">
+        <div class="dash-col col-sm-6 col-xl-3 ps-0 "id="card-2">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa fa-dollar-sign fa-3x text-primary"></i>
                 <div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="dash-col col-sm-6 col-xl-3">
+        <div class="dash-col col-sm-6 col-xl-3 ps-0 " id="card-3">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa-solid fa-cart-shopping fa-3x text-primary"></i>
                 <div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="dash-col  pe-0  col-sm-6 col-xl-3">
+        <div class="dash-col  pe-0  col-sm-6 col-xl-3 ps-0 pe-0">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa-solid fa-users fa-3x text-primary"></i>
                 <div>
@@ -84,66 +84,102 @@
             </div>
         </div>
     </section>
-    <section class="table-style row mt-4 border shadow rounded-3 p-4">
-        <div class="pb-2"><h3>Recent Sales</h3></div>
-        <div class="col mt-2 table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th scope="col">Invoice</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Customer</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                </tbody>
-            </table>
+
+    <section class="row ">
+        <div class="col-12 col-xl-6" id="table-1">
+            <div  class="table-style   mt-4 border shadow rounded-3 p-4">
+                <div class="pb-2"><h2>Recent Sales</h2></div>
+                <div class="col mt-2 table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Invoice</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-style col-12 col-xl-6 mt-4  border shadow rounded-3 p-4">
+            <div class="pb-2"><h5>Recently Added Products</h5></div>
+            <div class="col mt-2 table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">I00-001</th>
+                        <td>Apple Earpods</td>
+                        <td>50</td>
+                        <td>$891.2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I00-002</th>
+                        <td>Macbook Pro</td>
+                        <td>100</td>
+                        <td>$300</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
+
 </main>
 
 
