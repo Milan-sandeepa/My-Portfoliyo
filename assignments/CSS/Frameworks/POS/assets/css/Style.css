@@ -42,6 +42,7 @@ body {
     align-items: center;
     margin-top: 10px;
     background: #fff;
+    transition: .4s;
 }
 
 .table-style {
@@ -52,6 +53,13 @@ body {
     padding-left: 0px;
 }
 
+.dash-2col:hover{
+    transform: scale(1.02);
+    z-index: 1;
+}
+#card-1-items{
+
+}
 @media (max-width: 1199px) {
     #card-2 {
         padding-right: 0px;
