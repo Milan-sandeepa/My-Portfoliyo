@@ -20,19 +20,19 @@
             </button>
             <div class="collapse navbar-collapse  justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav ">
-                    <li class="nav-item" id="homebtn">
+                    <li class="nav-item" id="homeBtn">
                         <a class="nav-link active text-light" aria-current="page" href="#">Dashboard</a>
                     </li>
-                    <li class="nav-item " id="itembtn">
+                    <li class="nav-item " id="itemBtn">
                         <a class="nav-link text-light" href="#">Items</a>
                     </li>
-                    <li class="nav-item" id="customerbtn">
+                    <li class="nav-item" id="customerBtn">
                         <a class="nav-link text-light" href="#">Customers</a>
                     </li>
-                    <li class="nav-item" id="placeOrderbtn">
+                    <li class="nav-item" id="placeOrderBtn">
                         <a class="nav-link text-light" href="#">Place Order</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item " id="ordersBtn">
                         <a class="nav-link text-light" href="#">Orders</a>
                     </li>
                     <li class="nav-item ">
@@ -51,16 +51,16 @@
 <!--dashBoard-->
 <main class="container-fluid" id="dashboard">
     <section class="row mt-5 ">
-        <div class="dash-col col-sm-6 col-xl-3  ">
+        <div class="dash-col col-sm-6 col-xl-3  ps-0" id="card-1">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa fa-chart-line fa-3x text-primary"></i>
-                <div>
+                <div >
                     <h4>Today Sales</h4>
                     <h6 class="mb-0">$1234</h6>
                 </div>
             </div>
         </div>
-        <div class="dash-col col-sm-6 col-xl-3">
+        <div class="dash-col col-sm-6 col-xl-3 ps-0 "id="card-2">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa fa-dollar-sign fa-3x text-primary"></i>
                 <div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </div>
-        <div class="dash-col col-sm-6 col-xl-3">
+        <div class="dash-col col-sm-6 col-xl-3 ps-0 " id="card-3">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa-solid fa-cart-shopping fa-3x text-primary"></i>
                 <div>
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="dash-col  pe-0  col-sm-6 col-xl-3">
+        <div class="dash-col  pe-0  col-sm-6 col-xl-3 ps-0 pe-0">
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa-solid fa-users fa-3x text-primary"></i>
                 <div>
@@ -88,64 +88,99 @@
             </div>
         </div>
     </section>
-    <section class="table-style row mt-4 border shadow rounded-3 p-4">
-        <div class="pb-2"><h3>Recent Sales</h3></div>
-        <div class="col mt-2 table-responsive">
-            <table class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th scope="col">Invoice</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Customer</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                <tr>
-                    <th scope="row">INV-0123</th>
-                    <td>Sep 2022</td>
-                    <td>Jhon Smith</td>
-                    <td>$100</td>
-                    <td>Paid</td>
-                </tr>
-                </tbody>
-            </table>
+
+    <section class="row ">
+        <div class="col-12 col-xl-6" id="table-1">
+            <div  class="table-style   mt-4 border shadow rounded-3 p-4">
+                <div class="pb-2"><h2>Recent Sales</h2></div>
+                <div class="col mt-2 table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Invoice</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INV-0123</th>
+                            <td>Sep 2022</td>
+                            <td>Jhon Smith</td>
+                            <td>$100</td>
+                            <td>Paid</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-style col-12 col-xl-6 mt-4  border shadow rounded-3 p-4">
+            <div class="pb-2"><h5>Recently Added Products</h5></div>
+            <div class="col mt-2 table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">I00-001</th>
+                        <td>Apple Earpods</td>
+                        <td>50</td>
+                        <td>$891.2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I00-002</th>
+                        <td>Macbook Pro</td>
+                        <td>100</td>
+                        <td>$300</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 </main>
@@ -153,19 +188,78 @@
 
 <!--item Section-->
 <main class="container-fluid" id="item">
+    <div class="row mt-5">
+        <div class="col-6">
+            <h4>Product List</h4>
+            <p>Manage your products</p>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn h-75 mt-1 col-12 col-sm-6 col-md-6 col-xl-4" data-bs-toggle="modal" data-bs-target="#itemAddModal" style="background: #FF9F43;color: white;" >+ Add Item</button>
+        </div>
+    </div>
+
+    <!--Add Item Modal -->
+    <div class="modal fade" id="itemAddModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="itemModalLabel">Add Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemCode">Item Code</label>
+                            <input class="form-control" id="itemCode" type="text">
+                            <span class="control-error" id="itemlblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemName">Item Name</label>
+                            <input class="form-control" id="itemName" type="text">
+                            <span class="control-error" id="itemlblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemQty">Item Qty</label>
+                            <input class="form-control" id="itemQty" type="text">
+                            <span class="control-error" id="itemlblqty"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="itemPrice">Unit Price</label>
+                            <input class="form-control" id="itemPrice" type="text">
+                            <span class="control-error" id="itemlblprice"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="btnItem">Add</button>
+                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
+                    <!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
+                    <!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
+                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Item Modal end-->
+
     <section class="row">
-        <div class="col-6 mt-5 ">
+        <div class="col-12 col-xl-12 mt-3 ">
             <div class=" bg-light border shadow rounded-3 p-4">
                 <div>
-                    <h4 class="mb-4">Items</h4>
-                    <div class="col mt-2 table-responsive">
-                        <table class="table table-bordered table-hover">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-magnifying-glass" id="seachIconItem"></i>
+                        <input class="form-control" type="text" placeholder="Search.." id="searchItemInput">
+                    </div>
+                    <div class="col mt-2 table-responsive p-3">
+                        <table class="table  table-hover">
                             <thead>
-                            <tr>
+                            <tr class="table-primary">
                                 <th scope="col">Item Code</th>
                                 <th scope="col">Item Name</th>
                                 <th scope="col">Item Qty</th>
                                 <th scope="col">Item Price</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -174,36 +268,14 @@
                                 <td>Bag</td>
                                 <td>100</td>
                                 <td>$100</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">I-0123</th>
-                                <td>Phone</td>
-                                <td>100</td>
-                                <td>$1000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">I-0123</th>
-                                <td>Shoes</td>
-                                <td>100</td>
-                                <td>$160</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">I-0123</th>
-                                <td>Book</td>
-                                <td>100</td>
-                                <td>$100</td>
+                                <td>X</td>
                             </tr>
                             <tr>
                                 <th scope="row">I-0123</th>
                                 <td>Bag</td>
                                 <td>100</td>
                                 <td>$100</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">I-0123</th>
-                                <td>Bag</td>
-                                <td>100</td>
-                                <td>$100</td>
+                                <td>X</td>
                             </tr>
                             </tbody>
                         </table>
@@ -211,61 +283,87 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 mt-5">
-            <div class=" bg-light border shadow rounded-3  p-4">
-                <div>
-                    <div>
-                        <h1 class="mb-4">Add Item</h1>
-                        <div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemCode">Item Code</label>
-                                <input class="form-control" id="itemCode" type="text">
-                                <span class="control-error"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemName">Item Name</label>
-                                <input class="form-control" id="itemName" type="text">
-                                <span class="control-error"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemQty">Item Qty</label>
-                                <input class="form-control" id="itemQty" type="text">
-                                <span class="control-error" id="lblqty"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="itemPrice">Unit Price</label>
-                                <input class="form-control" id="itemPrice" type="text">
-                                <span class="control-error" id="lblprice"></span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2">Add</button>
-                        <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" >Remove</button>
-                        <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" >Update</button>
-                        <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>
-                        <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" >Clear All</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
+
 </main>
 <!--item Section End-->
 
 <!--customer Section-->
 <main class="container-fluid" id="customer">
+    <div class="row mt-5">
+        <div class="col-6">
+            <h4>Customer List</h4>
+            <p>Manage your customers</p>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <button class="btn h-75 mt-1 col-12 col-sm-8 col-md-6 col-xl-4" data-bs-toggle="modal"
+                    data-bs-target="#customerAddModal" style="background: #FF9F43;color: white;">+ Add Customer
+            </button>
+        </div>
+    </div>
+
+    <!--Add Customer Modal -->
+    <div class="modal fade" id="customerAddModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="customerModalLabel">Add Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="customerCode">Customer ID</label>
+                            <input class="form-control" id="customerCode" type="text">
+                            <span class="control-error" id="customerlblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="customeName">Customer Name</label>
+                            <input class="form-control" id="customeName" type="text">
+                            <span class="control-error" id="customerlblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="customerAddress">Customer Address</label>
+                            <input class="form-control" id="customerAddress" type="text">
+                            <span class="control-error" id="customerlbladdress"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="customerContact">Customer Contact</label>
+                            <input class="form-control" id="customerContact" type="text">
+                            <span class="control-error" id="customerlblcontact"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="">Add</button>
+                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
+                    <!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
+                    <!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
+                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Customer Modal end-->
+
     <section class="row">
-        <div class="col-6 mt-5 ">
+        <div class="col-12 col-xl-12 mt-3">
             <div class=" bg-light border shadow rounded-3 p-4">
                 <div>
-                    <h4 class="mb-4">Customers</h4>
-                    <div class="col mt-2 table-responsive">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-magnifying-glass" id="seachCustomerIcon"></i>
+                        <input class="form-control" type="text" placeholder="Search.." id="searchCustomerInput">
+                    </div>
+                    <div class="col mt-2 table-responsive p-3">
                         <table class="table table-bordered table-hover">
                             <thead>
-                            <tr>
+                            <tr class="table-primary">
                                 <th scope="col">Customer ID</th>
                                 <th scope="col">Customer Name</th>
                                 <th scope="col">Customer Address</th>
                                 <th scope="col">Customer Contact</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -274,75 +372,17 @@
                                 <td>Amal</td>
                                 <td>Galle</td>
                                 <td>077-1234553</td>
+                                <td>X</td>
                             </tr>
                             <tr>
                                 <th scope="row">C-002</th>
                                 <td>Nuwan</td>
                                 <td>Galle</td>
                                 <td>077-1234552</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-003</th>
-                                <td>Tharaka</td>
-                                <td>Kandy</td>
-                                <td>077-1234551</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-004</th>
-                                <td>Sandun</td>
-                                <td>Matara</td>
-                                <td>077-1234557</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-005</th>
-                                <td>Nimesh</td>
-                                <td>Colombo</td>
-                                <td>077-1234558</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-006</th>
-                                <td>Dasun</td>
-                                <td>Panadura</td>
-                                <td>077-1234559</td>
+                                <td>X</td>
                             </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 mt-5">
-            <div class=" bg-light border shadow rounded-3  p-4">
-                <div>
-                    <div>
-                        <h1 class="mb-4">Add Customer</h1>
-                        <div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="customerCode">Customer ID</label>
-                                <input class="form-control" id="customerCode" type="text">
-                                <span class="control-error" id="lblCode"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="customeName">Customer Name</label>
-                                <input class="form-control" id="customeName" type="text">
-                                <span class="control-error" id="lblname"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="customerAddress">Customer Address</label>
-                                <input class="form-control" id="customerAddress" type="text">
-                                <span class="control-error" id="lbladdress"></span>
-                            </div>
-                            <div class="form-group ms-2 me-2">
-                                <label for="customerContact">Customer Contact</label>
-                                <input class="form-control" id="customerContact" type="text">
-                                <span class="control-error" id="lblcontact"></span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" id="btnItem">Add</button>
-                        <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>
-                        <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>
-                        <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>
-                        <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>
                     </div>
                 </div>
             </div>
@@ -527,6 +567,7 @@
                                 <th scope="col">Item Name</th>
                                 <th scope="col">Item Price</th>
                                 <th scope="col">Item Qty</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -535,18 +576,21 @@
                                 <td>Bag</td>
                                 <td>$100</td>
                                 <td>100</td>
+                                <td>X</td>
                             </tr>
                             <tr>
                                 <th scope="row">I-0123</th>
                                 <td>Phone</td>
                                 <td>$1000</td>
                                 <td>100</td>
+                                <td>X</td>
                             </tr>
                             <tr>
                                 <th scope="row">I-0123</th>
                                 <td>Shoes</td>
                                 <td>$160</td>
                                 <td>100</td>
+                                <td>X</td>
                             </tr>
 
                             </tbody>
@@ -559,6 +603,58 @@
 </main>
 <!--place Order Section End-->
 
+<!--orders Section-->
+<main class="container-fluid" id="orders">
+    <div class="row mt-5">
+        <div class="col-6">
+            <h4>Orders List</h4>
+            <p>Manage your orders</p>
+        </div>
+    </div>
+
+    <section class="row">
+        <div class="col-12 col-xl-12 mt-3 ">
+            <div class=" bg-light border shadow rounded-3 p-4">
+                <div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-magnifying-glass" id="seachIcon"></i>
+                        <input class="form-control" type="text" placeholder="Search.." id="searchInput">
+                    </div>
+                    <div class="col mt-2 table-responsive p-3">
+                        <table class="table  table-hover">
+                            <thead>
+                            <tr class="table-primary">
+                                <th scope="col">Invoice</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Customer</th>
+                                <th scope="col">Item Price</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">I-0123</th>
+                                <td>Bag</td>
+                                <td>100</td>
+                                <td>$100</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">I-0123</th>
+                                <td>Bag</td>
+                                <td>100</td>
+                                <td>$100</td>
+                                <td>X</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--orders Section End-->
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/my-script.js"></script>
