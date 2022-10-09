@@ -108,6 +108,16 @@ $("#customerUpdateBtn").click(function () {
     }
 });
 
+$(document).ready(function (){
+    $("#searchInput").on('keyup',function (){
+        var value = $(this).val().toLowerCase();
+
+        $("#tblCustomer>tr").filter(function (){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+});
+
 function searchCustomer(cusID) {
     for (let customer of customers) {
         if (customer.id == cusID) {
