@@ -69,29 +69,29 @@
                 <div class="modal-body">
                     <div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerCode">Customer ID</label>
-                            <input class="form-control" id="customerCode" type="text">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerID" type="text">
                             <span class="control-error" id="lblCode"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customeName">Customer Name</label>
-                            <input class="form-control" id="customeName" type="text">
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerName" type="text">
                             <span class="control-error" id="lblname"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerAddress">Customer Address</label>
-                            <input class="form-control" id="customerAddress" type="text">
+                            <label for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddress" type="text">
                             <span class="control-error" id="lbladdress"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerContact">Customer Contact</label>
-                            <input class="form-control" id="customerContact" type="text">
+                            <label for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContact" type="text">
                             <span class="control-error" id="lblcontact"></span>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="">Add</button>
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="customerAddBtn">Add</button>
                     <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
                     <!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
                     <!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
@@ -103,15 +103,55 @@
 
     <!--Add Customer Modal end-->
 
+    <!--Update Customer Modal -->
+    <div class="modal fade" id="customerEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editModalLabel">Update Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerUpdateID" type="text" readonly>
+                            <span class="control-error" id="UpdatelblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerUpdateName" type="text">
+                            <span class="control-error" id="Updatelblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerUpdateAddress" type="text">
+                            <span class="control-error" id="Updatelbladdress"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerUpdateContact" type="text">
+                            <span class="control-error" id="Updatelblcontact"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="customerUpdateBtn">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Update Customer Modal end-->
+
     <section class="row">
         <div class="col-12 col-xl-12 mt-3">
-            <div class=" bg-light border shadow rounded-3 p-4">
+            <div class=" bg-light border shadow rounded-3 p-4 ">
                 <div>
                     <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-magnifying-glass" id="seachIcon"></i>
                         <input class="form-control" type="text" placeholder="Search.." id="searchInput">
                     </div>
-                    <div class="col mt-2 table-responsive p-3">
+                    <div class="col mt-2 table-responsive p-3 ">
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr class="table-primary">
@@ -122,21 +162,8 @@
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">C-001</th>
-                                <td>Amal</td>
-                                <td>Galle</td>
-                                <td>077-1234553</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-002</th>
-                                <td>Nuwan</td>
-                                <td>Galle</td>
-                                <td>077-1234552</td>
-                                <td>X</td>
-                            </tr>
+                            <tbody id="tblCustomer">
+
                             </tbody>
                         </table>
                     </div>
@@ -146,5 +173,7 @@
     </section>
 </main>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="../assets/js/my-scriptpos.js"></script>
 </body>
 </html>
