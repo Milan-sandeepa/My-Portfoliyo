@@ -68,39 +68,75 @@
                 <div class="modal-body">
                     <div>
                         <div class="form-group ms-2 me-2">
-                            <label for="itemCode">Item Code</label>
-                            <input class="form-control" id="itemCode" type="text">
+                            <label for="txtItemID">Item Code</label>
+                            <input class="form-control" id="txtItemID" type="text">
                             <span class="control-error" id="lblCode"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="itemName">Item Name</label>
-                            <input class="form-control" id="itemName" type="text">
+                            <label for="txtItemName">Item Name</label>
+                            <input class="form-control" id="txtItemName" type="text">
                             <span class="control-error" id="lblname"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="itemQty">Item Qty</label>
-                            <input class="form-control" id="itemQty" type="text">
+                            <label for="txtItemQty">Item Qty</label>
+                            <input class="form-control" id="txtItemQty" type="text">
                             <span class="control-error" id="lblqty"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="itemPrice">Unit Price</label>
-                            <input class="form-control" id="itemPrice" type="text">
+                            <label for="txtItemPrice">Unit Price</label>
+                            <input class="form-control" id="txtItemPrice" type="text">
                             <span class="control-error" id="lblprice"></span>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="btnItem">Add</button>
-<!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
-<!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
-<!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
-<!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>-->
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="itemAddBtn">Add</button>
+
                 </div>
             </div>
         </div>
     </div>
-
     <!--Add Item Modal end-->
+
+    <!--Update item Modal -->
+    <div class="modal fade" id="itemEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editModalLabel">Update Item</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtItemID">Item ID</label>
+                            <input class="form-control" id="txtItemUpdateID" type="text" readonly>
+                            <span class="control-error" id="UpdatelblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtItemName">Item Name</label>
+                            <input class="form-control" id="txtItemUpdateName" type="text">
+                            <span class="control-error" id="Updatelblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtItemQty">Item Qty</label>
+                            <input class="form-control" id="txtItemUpdateQty" type="text">
+                            <span class="control-error" id="Updatelbladdress"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtItemPrice">Item Price</label>
+                            <input class="form-control" id="txtItemUpdatePrice" type="text">
+                            <span class="control-error" id="Updatelblcontact"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="itemUpdateBtn">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Update item Modal end-->
 
     <section class="row">
         <div class="col-12 col-xl-12 mt-3 ">
@@ -121,21 +157,8 @@
                                <th scope="col">Action</th>
                            </tr>
                            </thead>
-                           <tbody>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Bag</td>
-                               <td>100</td>
-                               <td>$100</td>
-                               <td>X</td>
-                           </tr>
-                           <tr>
-                               <th scope="row">I-0123</th>
-                               <td>Bag</td>
-                               <td>100</td>
-                               <td>$100</td>
-                               <td>X</td>
-                           </tr>
+                           <tbody id="tblItem">
+
                            </tbody>
                        </table>
                    </div>
@@ -146,5 +169,7 @@
 </main>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="../assets/js/my-scriptpos.js"></script>
 </body>
 </html>
