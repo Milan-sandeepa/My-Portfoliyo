@@ -329,6 +329,22 @@ function deleteItem(itemID) {
 }
 
 // update item
+
+$("#txtItemUpdatePrice").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        let itemID = $("#txtItemUpdateID").val();
+        let response = updateItem(itemID);
+        if (response) {
+            alert("Item Updated Successfully");
+            $("#txtItemUpdateName").val("");
+            $("#txtItemUpdateQty").val("");
+            $("#txtItemUpdatePrice").val("");
+        } else {
+            alert("Update Failed..!");
+        }
+    }
+});
+
 $("#itemUpdateBtn").click(function () {
     let itemID = $("#txtItemUpdateID").val();
     let response = updateItem(itemID);
