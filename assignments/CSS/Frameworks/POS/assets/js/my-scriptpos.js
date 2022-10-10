@@ -1,5 +1,60 @@
 var customers = [];
 
+$("#customerAddModal").click(function (){
+    $("#txtCustomerID").focus();
+});
+
+$("#txtCustomerID").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCustomerName").focus();
+    }
+});
+
+$("#txtCustomerName").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCustomerAddress").focus();
+    }
+});
+
+$("#txtCustomerAddress").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCustomerContact").focus();
+    }
+});
+
+$("#txtCustomerContact").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        let customerID = $("#txtCustomerID").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerContact = $("#txtCustomerContact").val();
+
+        // customer
+        var customerObject = {
+            id: customerID,
+            name: customerName,
+            address: customerAddress,
+            contact: customerContact
+        }
+
+        //add the customer object to the array
+        customers.push(customerObject);
+        loadAllCustomers();
+
+        // text Fields clear
+        $("#txtCustomerID").val("");
+        $("#txtCustomerName").val("");
+        $("#txtCustomerAddress").val("");
+        $("#txtCustomerContact").val("");
+    }
+});
+
+$("#txtCustomerContact").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCustomerID").focus();
+    }
+});
+
 $("#customerAddBtn").click(function () {
     let customerID = $("#txtCustomerID").val();
     let customerName = $("#txtCustomerName").val();
@@ -94,6 +149,22 @@ function bindRowClickEvents() {
 }
 
 // update customer
+
+$("#txtCustomerUpdateContact").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        let customerID = $("#txtCustomerUpdateID").val();
+        let response = updateCustomer(customerID);
+        if (response) {
+            alert("Customer Updated Successfully");
+            $("#txtCustomerUpdateName").val("");
+            $("#txtCustomerUpdateAddress").val("");
+            $("#txtCustomerUpdateContact").val("");
+        } else {
+            alert("Update Failed..!");
+        }
+    }
+});
+
 $("#customerUpdateBtn").click(function () {
     let customerID = $("#txtCustomerUpdateID").val();
     let response = updateCustomer(customerID);
