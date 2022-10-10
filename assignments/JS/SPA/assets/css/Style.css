@@ -101,6 +101,14 @@ body {
     padding-left: 28px;
 }
 
+#seachOrderIcon{
+    position: relative;
+    left: 25px;
+}
+#searchOrderInput{
+    padding-left: 28px;
+}
+
 
 /*body{*/
 /*background: #f2edf3;*/

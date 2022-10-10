@@ -157,6 +157,62 @@ function updateCustomer(customerID) {
 // item js
 var items = [];
 
+$("#itemAddModal").click(function (){
+    $("#txtItemID").focus();
+});
+
+$("#txtItemID").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemName").focus();
+    }
+});
+
+$("#txtItemName").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemQty").focus();
+    }
+});
+
+$("#txtItemQty").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemPrice").focus();
+    }
+});
+
+$("#txtItemPrice").on('keydown', function (event) {
+    if (event.key == "Enter") {
+            let itemID = $("#txtItemID").val();
+            let itemName = $("#txtItemName").val();
+            let itemQty = $("#txtItemQty").val();
+            let itemPrice = $("#txtItemPrice").val();
+
+            // item
+            var itemObject = {
+                id: itemID,
+                name: itemName,
+                qty: itemQty,
+                price: itemPrice
+            }
+
+            //add the items object to the array
+            items.push(itemObject);
+
+            loadAllItems();
+
+            // text Fields clear
+            $("#txtItemID").val("");
+            $("#txtItemName").val("");
+            $("#txtItemQty").val("");
+            $("#txtItemPrice").val("");
+    }
+});
+
+$("#txtItemPrice").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemID").focus();
+    }
+});
+
 $("#itemAddBtn").click(function () {
     let itemID = $("#txtItemID").val();
     let itemName = $("#txtItemName").val();
@@ -203,7 +259,7 @@ function loadAllItems() {
      bindRowItemClickEvents();
 }
 
-// Delete Customer and edit icon Set
+// Delete Item and edit icon Set
 
 function bindRowItemClickEvents() {
     $(".editIconItem").click(function () {
