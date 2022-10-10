@@ -1,4 +1,3 @@
-var items = [];
 
 $("#itemAddModal").click(function (){
     $("#txtItemID").focus();
@@ -217,7 +216,7 @@ function updateItem(itemID) {
 
 // item seach bar
 $(document).ready(function (){
-    $("#searchInput").on('keyup',function (){
+    $("#searchItemInput").on('keyup',function (){
         var value = $(this).val().toLowerCase();
 
         $("#tblItem>tr").filter(function (){
