@@ -43,3 +43,13 @@ $("#ordersBtn").click(function () {
     $("#placeOrder").css("display", "none");
     $("#orders").css("display", "block");
 });
+
+function TotalItemsLoad(){
+    let tot=items.length;
+    $("#itemsTotal").text(tot);
+}
+
+function TotalCustomersLoad(){
+    let tot=customers.length;
+    $("#customersTotal").text(tot);
+}

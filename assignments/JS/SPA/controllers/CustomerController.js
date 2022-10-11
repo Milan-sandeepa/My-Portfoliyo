@@ -49,7 +49,7 @@ $("#txtCustomerContact").on('keydown', function (event) {
             customers.push(customerObject);
 
             loadAllCustomers();
-
+            TotalCustomersLoad();
             clearCusAllTexts();
         }
     }
@@ -88,7 +88,7 @@ $("#customerAddBtn").click(function () {
         customers.push(customerObject);
 
         loadAllCustomers();
-
+        TotalCustomersLoad();
         clearCusAllTexts();
     }
 });
@@ -156,6 +156,7 @@ function deleteCustomer(customerID) {
         let indexNumber = customers.indexOf(customer);
         customers.splice(indexNumber, 1);
         loadAllCustomers();
+        TotalCustomersLoad();
         return true;
     } else {
         return false;
@@ -163,6 +164,104 @@ function deleteCustomer(customerID) {
 }
 
 // update Customer-------------------------------------------------------------------------
+
+$("#txtCustomerUpdateName,#txtCustomerUpdateAddress,#txtCustomerUpdateContact").on('keyup', function (event) {
+    checkCusUpValidity();
+});
+
+$("#txtCustomerUpdateName,#txtCustomerUpdateAddress,#txtCustomerUpdateContact").on('blur', function (event) {
+    checkCusUpValidity();
+});
+
+$("#txtCustomerUpdateName").on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomerUp(cusNameUpRegEx, $("#txtCustomerUpdateName"))) {
+        $("#txtCustomerUpdateAddress").focus();
+    } else {
+        focusText($("#txtCustomerUpdateName"));
+    }
+});
+
+$("#txtCustomerUpdateAddress").on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomerUp(cusAddressUpRegEx, $("#txtCustomerUpdateAddress"))) {
+        focusText($("#txtCustomerUpdateContact"));
+    }
+});
+
+$("#txtCustomerUpdateContact").on('keydown', function (event) {
+    if (event.key == "Enter" && checkCustomerUp(cusContactUpRegEx, $("#txtCustomerUpdateContact"))) {
+        let res = confirm("Do you want to add this Update Customer.?");
+        if (res) {
+            alert("Customer Updated Successfully");
+            let customerID = $("#txtCustomerUpdateID").val();
+            updateCustomer(customerID);
+
+        }else {
+            alert("Update Failed..!");
+        }
+    }
+
+});
+
+$("#customerUpdateBtn").click(function () {
+    let res = confirm("Do you want to add this Update Customer.?");
+    if (res) {
+        alert("Customer Updated Successfully");
+        let customerID = $("#txtCustomerUpdateID").val();
+        updateCustomer(customerID);
+
+    }else {
+        alert("Update Failed..!");
+    }
+});
+
+function updateCustomer(customerID) {
+    let customer = searchCustomer(customerID);
+    if (customer != null) {
+        customer.id = $("#txtCustomerUpdateID").val();
+        customer.name = $("#txtCustomerUpdateName").val();
+        customer.address = $("#txtCustomerUpdateAddress").val();
+        customer.contact = $("#txtCustomerUpdateContact").val();
+
+        loadAllCustomers();
+        clearCusUpAllTexts();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Customer seach bar
+$(document).ready(function (){
+    $("#searchCustomerInput").on('keyup',function (){
+        var value = $(this).val().toLowerCase();
+
+        $("#tblCustomer>tr").filter(function (){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

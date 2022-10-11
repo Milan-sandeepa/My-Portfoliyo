@@ -52,7 +52,7 @@ $("#txtItemPrice").on('keydown', function (event) {
             items.push(itemObject);
 
             loadAllItems();
-
+            TotalItemsLoad();
             clearAllTexts();
         }
     }
@@ -72,7 +72,7 @@ $("#itemAddBtn").click(function () {
         items.push(itemObject);
 
         loadAllItems();
-
+        TotalItemsLoad();
         clearAllTexts();
     }
 });
@@ -136,7 +136,6 @@ function bindRowItemClickEvents() {
         if (option){
             if (deleteItem(deleteID)) {
                 alert("Item Successfully Deleted..");
-
             } else {
                 alert("No such Item to delete. please check the id");
             }
@@ -159,6 +158,7 @@ function deleteItem(itemID) {
         let indexNumber = items.indexOf(item);
         items.splice(indexNumber, 1);
         loadAllItems();
+        TotalItemsLoad();
         return true;
     } else {
         return false;
@@ -188,7 +188,6 @@ $("#txtItemUpdateQty").on('keydown', function (event) {
         focusText($("#txtItemUpdatePrice"));
     }
 });
-
 
 $("#txtItemUpdatePrice").on('keydown', function (event) {
     if (event.key == "Enter" && check(itemPriceUpRegEx, $("#txtItemUpdatePrice"))) {
