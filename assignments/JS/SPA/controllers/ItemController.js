@@ -1,28 +1,66 @@
 
-$("#itemAddModal").click(function (){
-    $("#txtItemID").focus();
+//disable tab key of all four text fields using grouping selector in CSS
+$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice,#txtItemUpdateName,#txtItemUpdateQty,#txtItemUpdatePrice").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
+
+$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+    checkValidity();
+});
+
+$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('blur', function (event) {
+    checkValidity();
 });
 
 $("#txtItemID").on('keydown', function (event) {
-    if (event.key == "Enter") {
+    if (event.key == "Enter" && check(itemIDRegEx, $("#txtItemID"))) {
         $("#txtItemName").focus();
+    } else {
+        focusText($("#txtItemID"));
     }
 });
+
 
 $("#txtItemName").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemQty").focus();
+    if (event.key == "Enter" && check(itemNameRegEx, $("#txtItemName"))) {
+        focusText($("#txtItemQty"));
     }
 });
+
 
 $("#txtItemQty").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemPrice").focus();
+    if (event.key == "Enter" && check(itemQtyRegEx, $("#txtItemQty"))) {
+        focusText($("#txtItemPrice"));
     }
 });
 
+
 $("#txtItemPrice").on('keydown', function (event) {
-    if (event.key == "Enter") {
+    if (event.key == "Enter" && check(itemPriceRegEx, $("#txtItemPrice"))) {
+        let res = confirm("Do you want to add this Item.?");
+        if (res) {
+            let itemID = $("#txtItemID").val();
+            let itemName = $("#txtItemName").val();
+            let itemQty = $("#txtItemQty").val();
+            let itemPrice = $("#txtItemPrice").val();
+
+            // item
+            var itemObject = item(itemID,itemName,itemQty,itemPrice);
+            //add the items object to the array
+            items.push(itemObject);
+
+            loadAllItems();
+
+            clearAllTexts();
+        }
+    }
+});
+
+$("#itemAddBtn").click(function () {
+    let res = confirm("Do you want to add this Item.?");
+    if (res) {
         let itemID = $("#txtItemID").val();
         let itemName = $("#txtItemName").val();
         let itemQty = $("#txtItemQty").val();
@@ -35,39 +73,8 @@ $("#txtItemPrice").on('keydown', function (event) {
 
         loadAllItems();
 
-        // text Fields clear
-        $("#txtItemID").val("");
-        $("#txtItemName").val("");
-        $("#txtItemQty").val("");
-        $("#txtItemPrice").val("");
+        clearAllTexts();
     }
-});
-
-$("#txtItemPrice").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemID").focus();
-    }
-});
-
-$("#itemAddBtn").click(function () {
-    let itemID = $("#txtItemID").val();
-    let itemName = $("#txtItemName").val();
-    let itemQty = $("#txtItemQty").val();
-    let itemPrice = $("#txtItemPrice").val();
-
-    // item
-    var itemObject = item(itemID,itemName,itemQty,itemPrice);
-    //add the items object to the array
-    items.push(itemObject);
-
-    loadAllItems();
-
-    // text Fields clear
-    $("#txtItemID").val("");
-    $("#txtItemName").val("");
-    $("#txtItemQty").val("");
-    $("#txtItemPrice").val("");
-
 });
 
 //load all Items
@@ -158,32 +165,54 @@ function deleteItem(itemID) {
     }
 }
 
-// update item
+// update item-------------------------------------------------------------------------
 
-$("#txtItemUpdatePrice").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        let itemID = $("#txtItemUpdateID").val();
-        let response = updateItem(itemID);
-        if (response) {
-            alert("Item Updated Successfully");
-            $("#txtItemUpdateName").val("");
-            $("#txtItemUpdateQty").val("");
-            $("#txtItemUpdatePrice").val("");
-        } else {
-            alert("Update Failed..!");
-        }
+$("#txtItemUpdateName,#txtItemUpdateQty,#txtItemUpdatePrice").on('keyup', function (event) {
+    checkUpValidity();
+});
+
+$("#txtItemUpdateName,#txtItemUpdateQty,#txtItemUpdatePrice").on('blur', function (event) {
+    checkUpValidity();
+});
+
+$("#txtItemUpdateName").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemNameUpRegEx, $("#txtItemUpdateName"))) {
+        $("#txtItemUpdateQty").focus();
+    } else {
+        focusText($("#txtItemUpdateName"));
     }
 });
 
+$("#txtItemUpdateQty").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemQtyUpRegEx, $("#txtItemUpdateQty"))) {
+        focusText($("#txtItemUpdatePrice"));
+    }
+});
+
+
+$("#txtItemUpdatePrice").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemPriceUpRegEx, $("#txtItemUpdatePrice"))) {
+        let res = confirm("Do you want to add this Update Item.?");
+        if (res) {
+            alert("Item Updated Successfully");
+            let itemID = $("#txtItemUpdateID").val();
+            updateItem(itemID);
+
+        }else {
+            alert("Update Failed..!");
+        }
+    }
+
+});
+
 $("#itemUpdateBtn").click(function () {
-    let itemID = $("#txtItemUpdateID").val();
-    let response = updateItem(itemID);
-    if (response) {
+    let res = confirm("Do you want to add this Update Item.?");
+    if (res) {
         alert("Item Updated Successfully");
-        $("#txtItemUpdateName").val("");
-        $("#txtItemUpdateQty").val("");
-        $("#txtItemUpdatePrice").val("");
-    } else {
+        let itemID = $("#txtItemUpdateID").val();
+        updateItem(itemID);
+
+    }else {
         alert("Update Failed..!");
     }
 });
@@ -196,6 +225,7 @@ function updateItem(itemID) {
         item.qty = $("#txtItemUpdateQty").val();
         item.price = $("#txtItemUpdatePrice").val();
         loadAllItems();
+        clearUpAllTexts();
         return true;
     } else {
         return false;

@@ -326,43 +326,40 @@
     </div>
 
     <!--Add Customer Modal -->
-    <div class="modal fade" id="customerAddModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal fade" id="customerAddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="customerModalLabel">Add Customer</h1>
+                    <h1 class="modal-title fs-5" id="exampleCustomerModalLabel">Add Customer</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerCode">Customer ID</label>
-                            <input class="form-control" id="customerCode" type="text">
-                            <span class="control-error" id="customerlblCode"></span>
+                            <label for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerID" type="text">
+                            <span class="control-error" id="lblCustomerCode"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customeName">Customer Name</label>
-                            <input class="form-control" id="customeName" type="text">
-                            <span class="control-error" id="customerlblname"></span>
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerName" type="text">
+                            <span class="control-error" id="lblCustomername"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerAddress">Customer Address</label>
-                            <input class="form-control" id="customerAddress" type="text">
-                            <span class="control-error" id="customerlbladdress"></span>
+                            <label for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddress" type="text">
+                            <span class="control-error" id="lbladdress"></span>
                         </div>
                         <div class="form-group ms-2 me-2">
-                            <label for="customerContact">Customer Contact</label>
-                            <input class="form-control" id="customerContact" type="text">
-                            <span class="control-error" id="customerlblcontact"></span>
+                            <label for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContact" type="text">
+                            <span class="control-error" id="lblcontact"></span>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="">Add</button>
-                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btnItemDelete">Remove</button>-->
-                    <!--                    <button class="btn btn-warning mt-3 col-12 c col-sm-12 col-md-3 col-xl-2" id="btnItemUpdate">Update</button>-->
-                    <!--                    <button class="btn btn-success mt-3 col-12  col-sm-12 col-md-3 col-xl-2">Get All</button>-->
-                    <!--                    <button class="btn btn-danger mt-3 col-12  col-sm-12 col-md-3 col-xl-2" id="btn-clear">Clear All</button>-->
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="customerAddBtn">Add</button>
+
                 </div>
             </div>
         </div>
@@ -370,15 +367,55 @@
 
     <!--Add Customer Modal end-->
 
+    <!--Update Customer Modal -->
+    <div class="modal fade" id="customerEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editCustomerModalLabel">Update Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerUpdateID" type="text" readonly>
+                            <span class="control-error" id="UpdateCustomerlblCode"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerUpdateName" type="text">
+                            <span class="control-error" id="UpdateCustomerlblname"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerUpdateAddress" type="text">
+                            <span class="control-error" id="UpdateCustomerlbladdress"></span>
+                        </div>
+                        <div class="form-group ms-2 me-2">
+                            <label for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerUpdateContact" type="text">
+                            <span class="control-error" id="UpdateCustomerlblcontact"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary mt-3 col-12 col-sm-12 col-md-3 col-xl-2" type="button" id="customerUpdateBtn">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Update Customer Modal end-->
+
     <section class="row">
         <div class="col-12 col-xl-12 mt-3">
-            <div class=" bg-light border shadow rounded-3 p-4">
+            <div class=" bg-light border shadow rounded-3 p-4 ">
                 <div>
                     <div class="col-12 col-sm-6 col-md-4 col-xl-3 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-magnifying-glass" id="seachCustomerIcon"></i>
                         <input class="form-control" type="text" placeholder="Search.." id="searchCustomerInput">
                     </div>
-                    <div class="col mt-2 table-responsive p-3" style="height: 450px; overflow-y: scroll">
+                    <div class="col mt-2 table-responsive p-3 " style="height: 450px; overflow-y: scroll">
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr class="table-primary">
@@ -389,21 +426,8 @@
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">C-001</th>
-                                <td>Amal</td>
-                                <td>Galle</td>
-                                <td>077-1234553</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C-002</th>
-                                <td>Nuwan</td>
-                                <td>Galle</td>
-                                <td>077-1234552</td>
-                                <td>X</td>
-                            </tr>
+                            <tbody id="tblCustomer">
+
                             </tbody>
                         </table>
                     </div>

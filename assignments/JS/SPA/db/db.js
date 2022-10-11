@@ -1,1 +1,2 @@
 var items = [];
+var customers = [];
