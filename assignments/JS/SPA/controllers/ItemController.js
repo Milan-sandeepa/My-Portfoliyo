@@ -29,13 +29,7 @@ $("#txtItemPrice").on('keydown', function (event) {
         let itemPrice = $("#txtItemPrice").val();
 
         // item
-        var itemObject = {
-            id: itemID,
-            name: itemName,
-            qty: itemQty,
-            price: itemPrice
-        }
-
+        var itemObject = item(itemID,itemName,itemQty,itemPrice);
         //add the items object to the array
         items.push(itemObject);
 
@@ -62,13 +56,7 @@ $("#itemAddBtn").click(function () {
     let itemPrice = $("#txtItemPrice").val();
 
     // item
-    var itemObject = {
-        id: itemID,
-        name: itemName,
-        qty: itemQty,
-        price: itemPrice
-    }
-
+    var itemObject = item(itemID,itemName,itemQty,itemPrice);
     //add the items object to the array
     items.push(itemObject);
 
