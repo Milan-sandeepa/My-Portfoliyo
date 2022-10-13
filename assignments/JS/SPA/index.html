@@ -470,7 +470,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="orderCustomerTel">Customer Tel :</label>
-                                    <input class="form-control" id="orderCustomerTel">
+                                    <input class="form-control" id="orderCustomerTel" readonly>
                                 </div>
                             </div>
                         </div>
@@ -478,13 +478,13 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Name :</label>
-                                    <input class="form-control" id="orderCustomerName" type="text">
+                                    <input class="form-control" id="orderCustomerName" type="text" readonly>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Address :</label>
-                                    <input class="form-control" id="orderCustomerAddress" type="text">
+                                    <input class="form-control" id="orderCustomerAddress" type="text" readonly>
                                 </div>
                             </div>
                         </div>
@@ -500,40 +500,34 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label>Item :</label>
-                                    <select class="form-control" id="selectItemCode"></select>
+                                    <label>Item Code :</label>
+                                    <select class="form-control" id="selectOrderItemCode"></select>
                                     <span class="control-error"
                                           id="item-empty-error"></span>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label>Item Code :</label>
-                                    <input class="form-control" id="txtItemCode" type="text">
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <div class="form-group">
                                     <label>Item Name :</label>
-                                    <input class="form-control" id="txtItemDescription" type="text">
+                                    <input class="form-control" id="txtOrderItemName" type="text" readonly>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="form-group">
                                     <label class="">Price :</label>
-                                    <input class="form-control" id="txtItemPriceOrder" type="text">
+                                    <input class="form-control" id="txtItemPriceOrder" type="text" readonly>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-6">
                                 <div class="form-group">
                                     <label class="">QtyOnH :</label>
-                                    <input class="form-control" id="txtQTYOnHand" type="text">
+                                    <input class="form-control" id="txtOrderQTYOnHand" type="text" readonly>
                                 </div>
                             </div>
                             <div class="col-6 mt-4">
                                 <div class="form-group">
                                     <label>Order Quantity :</label>
-                                    <input class="form-control" id="txtQty" min="1" type="number">
+                                    <input class="form-control" id="txtOrderQty" min="1" type="number">
                                     <span class="control-error" id="order-qty-empty-error"></span>
                                 </div>
                             </div>

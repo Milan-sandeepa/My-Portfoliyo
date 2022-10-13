@@ -100,6 +100,7 @@ $("#customerAddBtn").click(function () {
 
             loadAllCustomers();
             TotalCustomersLoad();
+            loadCustomersForOrder();
             clearCusAllTexts();
         }
     }
