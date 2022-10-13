@@ -3,7 +3,18 @@ $(document).ready(function () {
 });
 
 function generateOrderID() {
-
+    if (orders.length === 0){
+        $('#txtOrderID').val("INV-001");
+    }else {
+        let ordersCount = orders.length + 1;
+        if (ordersCount < 10){
+            $('#txtOrderID').val("INV-00"+ ordersCount);
+        }else if (ordersCount < 100){
+            $('#txtOrderID').val("INV-0"+ ordersCount);
+        }else if (ordersCount < 100000){
+            $('#txtOrderID').val("INV-"+ ordersCount);
+        }
+    }
 }
 
 // Invoice Details section----------------------------------------------
