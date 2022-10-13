@@ -5,7 +5,7 @@ $("#itemAddBtn").attr('disabled',true);
 $("#itemUpdateBtn").attr('disabled',true);
 
 // Item reguler expressions
-const itemIDRegEx = /^(I-)[0-9]{3}$/;
+const itemIDRegEx = /^(I00-)[0-9]{3}$/;
 const itemNameRegEx = /^[A-z ]{2,20}$/;
 const itemQtyRegEx = /^[0-9]{1,}$/;
 const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
@@ -17,7 +17,7 @@ const itemPriceUpRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 let itemValidations = [];
 let itemUpValidations = [];
 
-itemValidations.push({reg: itemIDRegEx, field: $('#txtItemID'),error:'Item ID Pattern is Wrong : I-001'});
+itemValidations.push({reg: itemIDRegEx, field: $('#txtItemID'),error:'Item ID Pattern is Wrong : I00-001'});
 itemValidations.push({reg: itemNameRegEx, field: $('#txtItemName'),error:'Item Name Pattern is Wrong : A-z 5-20'});
 itemValidations.push({reg: itemQtyRegEx, field: $('#txtItemQty'),error:'Item Quantity Pattern is Wrong : 0-9'});
 itemValidations.push({reg: itemPriceRegEx, field: $('#txtItemPrice'),error:'Item Price Pattern is Wrong : 100 or 100.00'});
@@ -120,7 +120,7 @@ $("#customerAddBtn").attr('disabled',true);
 $("#customerUpdateBtn").attr('disabled',true);
 
 // Customer regular expressions
-const cusIDRegEx = /^(C-)[0-9]{3}$/;
+const cusIDRegEx = /^(C00-)[0-9]{3}$/;
 const cusNameRegEx = /^[A-z ]{4,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{4,}$/;
 const cusContactRegEx = /^[0-9]{10}$/;
@@ -132,7 +132,7 @@ const cusContactUpRegEx = /^[0-9]{10}$/;
 let customerValidations = [];
 let customerUpdateValidations = [];
 
-customerValidations.push({reg: cusIDRegEx, field: $('#txtCustomerID'),error:'Customer ID Pattern is Wrong : C-001'});
+customerValidations.push({reg: cusIDRegEx, field: $('#txtCustomerID'),error:'Customer ID Pattern is Wrong : C00-001'});
 customerValidations.push({reg: cusNameRegEx, field: $('#txtCustomerName'),error:'Customer Name Pattern is Wrong : A-z 4-20'});
 customerValidations.push({reg: cusAddressRegEx, field: $('#txtCustomerAddress'),error:'Customer Address Pattern is Wrong : A-z 4-20'});
 customerValidations.push({reg: cusContactRegEx, field: $('#txtCustomerContact'),error:'Customer Contact Pattern is Wrong : 0-9'});

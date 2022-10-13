@@ -35,22 +35,29 @@ $("#txtCustomerAddress").on('keydown', function (event) {
 
 $("#txtCustomerContact").on('keydown', function (event) {
     if (event.key == "Enter" && checkCustomer(cusContactRegEx, $("#txtCustomerContact"))) {
-        let res = confirm("Do you want to add this Customer.?");
-        if (res) {
-            let customerID = $("#txtCustomerID").val();
-            let customerName = $("#txtCustomerName").val();
-            let customerAddress = $("#txtCustomerAddress").val();
-            let customerContact = $("#txtCustomerContact").val();
 
-            // Customer
-            var customerObject = customer(customerID,customerName,customerAddress,customerContact);
+        let id=$("#txtCustomerID").val();
+        if (searchCustomer(id)){
+            alert("Customer Id "+id+" already exist.please Try another Customer number");
+        }else {
+            let res = confirm("Do you want to add this Customer.?");
+            if (res) {
+                let customerID = $("#txtCustomerID").val();
+                let customerName = $("#txtCustomerName").val();
+                let customerAddress = $("#txtCustomerAddress").val();
+                let customerContact = $("#txtCustomerContact").val();
 
-            //add the customers object to the array
-            customers.push(customerObject);
+                // Customer
+                var customerObject = customer(customerID,customerName,customerAddress,customerContact);
 
-            loadAllCustomers();
-            TotalCustomersLoad();
-            clearCusAllTexts();
+                //add the customers object to the array
+                customers.push(customerObject);
+
+                loadAllCustomers();
+                TotalCustomersLoad();
+                loadCustomersForOrder();
+                clearCusAllTexts();
+            }
         }
     }
 });
@@ -74,22 +81,27 @@ function loadAllCustomers() {
 }
 
 $("#customerAddBtn").click(function () {
-    let res = confirm("Do you want to add this Customer.?");
-    if (res) {
-        let customerID = $("#txtCustomerID").val();
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerContact = $("#txtCustomerContact").val();
+    let id=$("#txtCustomerID").val();
+    if (searchCustomer(id)){
+        alert("Customer Id "+id+" already exist.please Try another Customer number");
+    }else {
+        let res = confirm("Do you want to add this Customer.?");
+        if (res) {
+            let customerID = $("#txtCustomerID").val();
+            let customerName = $("#txtCustomerName").val();
+            let customerAddress = $("#txtCustomerAddress").val();
+            let customerContact = $("#txtCustomerContact").val();
 
-        // Customer
-        var customerObject = customer(customerID,customerName,customerAddress,customerContact);
+            // Customer
+            var customerObject = customer(customerID,customerName,customerAddress,customerContact);
 
-        //add the customers object to the array
-        customers.push(customerObject);
+            //add the customers object to the array
+            customers.push(customerObject);
 
-        loadAllCustomers();
-        TotalCustomersLoad();
-        clearCusAllTexts();
+            loadAllCustomers();
+            TotalCustomersLoad();
+            clearCusAllTexts();
+        }
     }
 });
 

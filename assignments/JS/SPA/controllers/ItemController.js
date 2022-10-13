@@ -39,6 +39,37 @@ $("#txtItemQty").on('keydown', function (event) {
 
 $("#txtItemPrice").on('keydown', function (event) {
     if (event.key == "Enter" && check(itemPriceRegEx, $("#txtItemPrice"))) {
+
+        let id=$("#txtItemID").val();
+        if (searchItem(id)){
+            alert("Item Code "+id+" already exist.please Try another Item number");
+        }else {
+            let res = confirm("Do you want to add this Item.?");
+            if (res) {
+                let itemID = $("#txtItemID").val();
+                let itemName = $("#txtItemName").val();
+                let itemQty = $("#txtItemQty").val();
+                let itemPrice = $("#txtItemPrice").val();
+
+                // item
+                var itemObject = item(itemID,itemName,itemQty,itemPrice);
+                //add the items object to the array
+                items.push(itemObject);
+
+                loadAllItems();
+                TotalItemsLoad();
+                clearAllTexts();
+            }
+        }
+
+    }
+});
+
+$("#itemAddBtn").click(function () {
+    let id=$("#txtItemID").val();
+    if (searchItem(id)){
+        alert("Item Code "+id+" already exist.please Try another Item number")
+    }else {
         let res = confirm("Do you want to add this Item.?");
         if (res) {
             let itemID = $("#txtItemID").val();
@@ -55,25 +86,6 @@ $("#txtItemPrice").on('keydown', function (event) {
             TotalItemsLoad();
             clearAllTexts();
         }
-    }
-});
-
-$("#itemAddBtn").click(function () {
-    let res = confirm("Do you want to add this Item.?");
-    if (res) {
-        let itemID = $("#txtItemID").val();
-        let itemName = $("#txtItemName").val();
-        let itemQty = $("#txtItemQty").val();
-        let itemPrice = $("#txtItemPrice").val();
-
-        // item
-        var itemObject = item(itemID,itemName,itemQty,itemPrice);
-        //add the items object to the array
-        items.push(itemObject);
-
-        loadAllItems();
-        TotalItemsLoad();
-        clearAllTexts();
     }
 });
 
