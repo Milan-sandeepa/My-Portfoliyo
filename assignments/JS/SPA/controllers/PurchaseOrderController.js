@@ -201,10 +201,10 @@ function searchOrdersTm(cusID) {
 }
 
 function updateItems(itemID){
-    let order = searchItem(itemID);
+    let order = searchOrdersTm(itemID);
     let item = searchItem(itemID);
     if (item != null) {
-        item.qty =item.qty+order.qty;
+        item.qty=parseInt(item.qty)+parseInt(order.qty);
         loadAllItems();
         return true;
     }

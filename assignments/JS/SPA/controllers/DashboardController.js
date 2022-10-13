@@ -44,12 +44,35 @@ $("#ordersBtn").click(function () {
     $("#orders").css("display", "block");
 });
 
-function TotalItemsLoad(){
-    let tot=items.length;
+function TotalItemsLoad() {
+    let tot = items.length;
     $("#itemsTotal").text(tot);
 }
 
-function TotalCustomersLoad(){
-    let tot=customers.length;
+function TotalCustomersLoad() {
+    let tot = customers.length;
     $("#customersTotal").text(tot);
+}
+
+function loadAllDashboardItems() {
+    //remove all the table body content before adding data
+    $("#tblDashboardProducts").empty();
+
+
+    // get all item records from the array
+    for (var item of items) {
+        // add those data to the table row
+        var row = `<tr>
+
+        <td class="">${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.qty}</td>
+        <td>${item.price}</td>>
+        
+        </tr>`;
+
+        //then add it to the table body of customer table
+        $("#tblDashboardProducts").append(row);
+    }
+
 }

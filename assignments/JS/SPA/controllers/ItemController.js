@@ -59,6 +59,7 @@ $("#txtItemPrice").on('keydown', function (event) {
                 loadAllItems();
                 TotalItemsLoad();
                 loadItemsForOrder();
+                loadAllDashboardItems()
                 clearAllTexts();
             }
         }
@@ -86,6 +87,7 @@ $("#itemAddBtn").click(function () {
             loadAllItems();
             TotalItemsLoad();
             loadItemsForOrder();
+            loadAllDashboardItems()
             clearAllTexts();
         }
     }
