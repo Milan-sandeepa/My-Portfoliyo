@@ -276,6 +276,7 @@ $("#txtCash").on('keyup', function (event) {
 $('#btnSubmitOrder').click(function () {
     placeOrder();
     generateOrderID();
+    clearOrderTexts();
     carts.splice(0, cart.length);
     $('#tblCart').empty();
 });
@@ -319,7 +320,10 @@ function saveOrder() {
     return false;
 }
 
-
+function clearOrderTexts(){
+    $('#selectCusID,#orderCustomerTel,#orderCustomerName,#orderCustomerAddress,#Discount,#txtCash,#Balance').val("","","","","","","");
+    $('#lbltotal,#subtotal').text("00.00","00.00");
+}
 
 
 
