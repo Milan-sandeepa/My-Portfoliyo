@@ -3,16 +3,16 @@ $(document).ready(function () {
 });
 
 function generateOrderID() {
-    if (orders.length === 0){
+    if (orders.length === 0) {
         $('#txtOrderID').val("INV-001");
-    }else {
+    } else {
         let ordersCount = orders.length + 1;
-        if (ordersCount < 10){
-            $('#txtOrderID').val("INV-00"+ ordersCount);
-        }else if (ordersCount < 100){
-            $('#txtOrderID').val("INV-0"+ ordersCount);
-        }else if (ordersCount < 100000){
-            $('#txtOrderID').val("INV-"+ ordersCount);
+        if (ordersCount < 10) {
+            $('#txtOrderID').val("INV-00" + ordersCount);
+        } else if (ordersCount < 100) {
+            $('#txtOrderID').val("INV-0" + ordersCount);
+        } else if (ordersCount < 100000) {
+            $('#txtOrderID').val("INV-" + ordersCount);
         }
     }
 }
@@ -42,6 +42,7 @@ $('#selectCusID').click(function () {
 
 // Select Item section------------------------------------------------------
 $('#btnAddToTable').attr('disabled', true);
+$('#btnSubmitOrder').attr('disabled', true);
 
 function loadItemsForOrder() {
     $("#selectOrderItemCode").empty();
@@ -72,6 +73,7 @@ $("#txtOrderQty").on('keyup', function (event) {
 });
 
 $('#btnAddToTable').click(function () {
+    let oid = $("#txtOrderID").val();
     let itemID = $("#selectOrderItemCode").val();
     let itemName = $("#txtOrderItemName").val();
     let itemPrice = $("#txtItemPriceOrder").val();
@@ -82,10 +84,12 @@ $('#btnAddToTable').click(function () {
     if (parseInt(qtyOnHand) < itemsQty) {
         alert("No Stock please Update Stocks");
         return false;
-    } else if (orders.length == 0) {
-        var orderObject = order(itemID, itemName, itemPrice, itemsQty, itemsTotal);
+    } else if (carts.length == 0) {
 
-        orders.push(orderObject);
+        var cartTM = cart(itemID, itemName, itemPrice, itemsQty, itemsTotal);
+
+        carts.push(cartTM);
+
 
         let qtyVal = $("#txtOrderQty").val();
         let itemCode = $("#selectOrderItemCode").val();
@@ -103,19 +107,20 @@ $('#btnAddToTable').click(function () {
         $('#btnAddToTable').attr('disabled', true);
     } else {
         let searchItem;
-        for (var o of orders) {
-            if (o.code == itemID) {
-                searchItem = o.code;
+        for (var o of carts) {
+            if (o.cartICode == itemID) {
+                searchItem = o.cartICode;
                 break;
             }
         }
         if (searchItem != null) {
             let qtyNewVal = $("#txtOrderQty").val();
-            o.qty = Number(o.qty) + Number(qtyNewVal);
-            o.tot = o.qty * o.price;
+            o.cartOrderQty = Number(o.cartOrderQty) + Number(qtyNewVal);
+            o.cartTotal = o.cartOrderQty * o.cartIPrice;
         } else {
-            var orderObject = order(itemID, itemName, itemPrice, itemsQty, itemsTotal);
-            orders.push(orderObject);
+            var cartTM = cart(itemID, itemName, itemPrice, itemsQty, itemsTotal);
+
+            carts.push(cartTM);
         }
 
         let qtyVal = $("#txtOrderQty").val();
@@ -140,15 +145,15 @@ $('#btnAddToTable').click(function () {
 function loadCartTM() {
     $("#tblCart").empty();
 
-    for (var c of orders) {
+    for (var cart of carts) {
 
         // add those data to the table row
         var row = `<tr>
-            <td class="itemsID">${c.code}</td>
-            <td>${c.itemName}</td>
-            <td>${c.price}</td>
-            <td>${c.qty}</td>
-            <td>${c.tot}</td>
+            <td class="itemsID">${cart.cartICode}</td>
+            <td>${cart.cartIName}</td>
+            <td>${cart.cartIPrice}</td>
+            <td>${cart.cartOrderQty}</td>
+            <td>${cart.cartTotal}</td>
             <td><i class="cartRemoveIconItem fa-solid fa-trash-can" style="padding-left: 10px;cursor: pointer" type="button"></i></td></tr>`;
 
         //then add it to the table body of customer table
@@ -156,14 +161,20 @@ function loadCartTM() {
 
     }
     bindRowCartClickEvents();
+    totalCal();
 }
 
 function totalCal() {
     let sumTotal = 0;
-    for (let o of orders) {
-        sumTotal = sumTotal + Number(o.tot);
+    for (let cart of carts) {
+        sumTotal = sumTotal + Number(cart.cartTotal);
+    }
+    if ($("#Discount").val() == "") {
+
+        $('#subtotal').text(sumTotal);
     }
     $("#lbltotal").text(sumTotal);
+    $("#Discount,#txtCash,#Balance").val("", "", "");
 }
 
 function bindRowCartClickEvents() {
@@ -177,7 +188,7 @@ function bindRowCartClickEvents() {
 
         let option = confirm("Do you really want to Remove Item :" + deleteID);
 
-        if (option){
+        if (option) {
             if (deleteItemTm(deleteID)) {
                 alert("Successfully Removed..");
             } else {
@@ -191,11 +202,12 @@ function deleteItemTm(itemID) {
     let order = searchOrdersTm(itemID);
     updateItems(itemID);
     if (order != null) {
-        let indexNumber = orders.indexOf(order);
-        orders.splice(indexNumber, 1);
+        let indexNumber = carts.indexOf(order);
+        carts.splice(indexNumber, 1);
         loadCustomersForOrder();
         loadItemsForOrder();
         loadCartTM();
+        totalCal();
         return true;
     } else {
         return false;
@@ -203,32 +215,51 @@ function deleteItemTm(itemID) {
 }
 
 function searchOrdersTm(cusID) {
-    for (let o of orders) {
-        if (o.code == cusID) {
-            return o;
+    for (let cart of carts) {
+        if (cart.cartICode == cusID) {
+            return cart;
         }
     }
     return null;
 }
 
-function updateItems(itemID){
+function updateItems(itemID) {
     let order = searchOrdersTm(itemID);
     let item = searchItem(itemID);
     if (item != null) {
-        item.qty=parseInt(item.qty)+parseInt(order.qty);
+        item.qty = parseInt(item.qty) + parseInt(order.cartOrderQty);
         loadAllItems();
         return true;
     }
 }
 
+//discount function
 
 
+$("#Discount").on('keyup', function (event) {
+    let finalTotal = 0;
+    let dis = $("#Discount").val();
+    let Total = $("#lbltotal").text();
+    finalTotal = Total - (Number(Total) * Number(dis) / 100);
+    $("#subtotal").text(finalTotal);
 
+});
 
+// balance calculate
+$("#txtCash").on('keyup', function (event) {
+    let cash = $("#txtCash").val();
+    let balance = parseFloat(cash) - parseFloat($("#subtotal").text());
+    $("#Balance").val(balance);
+    if (balance > -1) {
+        $('#btnSubmitOrder').attr('disabled', false);
+    } else {
+        $('#btnSubmitOrder').attr('disabled', true);
+    }
+});
 
+$('#btnSubmitOrder').click(function () {
 
-
-
+});
 
 
 

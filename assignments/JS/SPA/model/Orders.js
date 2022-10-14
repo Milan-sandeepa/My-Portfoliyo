@@ -1,9 +1,9 @@
-function order(itemCode,itemName,unitPrice,qty,itemsTotal){
+function order(orderId,customerId,date,discount,itemsTotal){
     return{
-        code: itemCode,
-        itemName: itemName,
-        price:unitPrice,
-        qty:qty,
-        tot:itemsTotal
+        id: orderId,
+        cusId: customerId,
+        date:date,
+        discount:discount,
+        total:itemsTotal
     };
 }
