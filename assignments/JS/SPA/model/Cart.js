@@ -1,5 +1,6 @@
-function cart(cartItemCode, cartItemName, cartItemPrice, orderQty, cartTotal) {
+function cart(cusName,cartItemCode, cartItemName, cartItemPrice, orderQty, cartTotal) {
     return {
+        cusName: cusName,
         cartICode: cartItemCode,
         cartIName: cartItemName,
         cartIPrice: cartItemPrice,

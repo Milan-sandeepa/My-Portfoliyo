@@ -91,7 +91,7 @@ $("#txtOrderQty").on('keyup', function (event) {
 });
 
 $('#btnAddToTable').click(function () {
-    let oid = $("#txtOrderID").val();
+    let cusName = $("#orderCustomerName").val();
     let itemID = $("#selectOrderItemCode").val();
     let itemName = $("#txtOrderItemName").val();
     let itemPrice = $("#txtItemPriceOrder").val();
@@ -104,7 +104,7 @@ $('#btnAddToTable').click(function () {
         return false;
     } else if (carts.length == 0) {
 
-        var cartTM = cart(itemID, itemName, itemPrice, itemsQty, itemsTotal);
+        var cartTM = cart(cusName,itemID, itemName, itemPrice, itemsQty, itemsTotal);
 
         carts.push(cartTM);
 
@@ -136,7 +136,7 @@ $('#btnAddToTable').click(function () {
             o.cartOrderQty = Number(o.cartOrderQty) + Number(qtyNewVal);
             o.cartTotal = o.cartOrderQty * o.cartIPrice;
         } else {
-            var cartTM = cart(itemID, itemName, itemPrice, itemsQty, itemsTotal);
+            var cartTM = cart(cusName,itemID, itemName, itemPrice, itemsQty, itemsTotal);
 
             carts.push(cartTM);
         }
@@ -284,14 +284,13 @@ function placeOrder() {
     if (saveOrder()) {
         let orderId=$('#txtOrderID').val();
         let date=$("#txtDate").val();
-        let discount = $('#txtDiscount').val();
-        let cname = $('#txtCusName').val();
 
         for (let c of carts) {
-            let orderDetailsObject = orderDetail(orderId,date,cname,c.cartICode,c.cartIPrice,c.cartOrderQty,c.cartTotal);
+            let orderDetailsObject = orderDetail(orderId,date,c.cusName,c.cartICode,c.cartIPrice,c.cartOrderQty,c.cartTotal);
             orderDetails.push(orderDetailsObject);
         }
         alert("Successfully place order..");
+        loadAllOrderDetail();
         $('#btnSubmitOrder').attr('disabled', true);
     } else {
         alert("UnSuccessfully..Something went Wrong !!!");
@@ -311,6 +310,7 @@ function saveOrder() {
 
     loadAllDashboardSales();
     loadAllDashboardItems();
+    TotalOrdersLoad();
     if (isSaved) {
 
         return true;

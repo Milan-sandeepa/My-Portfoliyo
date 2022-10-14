@@ -44,6 +44,11 @@ $("#ordersBtn").click(function () {
     $("#orders").css("display", "block");
 });
 
+function TotalOrdersLoad() {
+    let tot = orders.length;
+    $("#OrdersTotal").text(tot);
+}
+
 function TotalItemsLoad() {
     let tot = items.length;
     $("#itemsTotal").text(tot);
