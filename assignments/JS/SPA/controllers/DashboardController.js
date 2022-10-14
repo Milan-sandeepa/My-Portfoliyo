@@ -49,6 +49,14 @@ function TotalOrdersLoad() {
     $("#OrdersTotal").text(tot);
 }
 
+function TotalSalesLoad() {
+    let totalSale = 0;
+    for (var o of orders) {
+        totalSale = totalSale+Number(o.total);
+    }
+    $('#salesTotal').text(totalSale+" Rs/=");
+}
+
 function TotalItemsLoad() {
     let tot = items.length;
     $("#itemsTotal").text(tot);

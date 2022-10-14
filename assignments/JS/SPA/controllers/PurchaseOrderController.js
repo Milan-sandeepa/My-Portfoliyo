@@ -311,6 +311,7 @@ function saveOrder() {
     loadAllDashboardSales();
     loadAllDashboardItems();
     TotalOrdersLoad();
+    TotalSalesLoad();
     if (isSaved) {
 
         return true;
