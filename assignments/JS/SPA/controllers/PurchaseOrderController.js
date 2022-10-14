@@ -1,9 +1,8 @@
-$(document).ready(function () {
-    generateOrderID();
-});
+generateOrderID();
+$('#txtDate').val(getCurrentDate());
 
 function generateOrderID() {
-    if (orders.length === 0) {
+    if (orders.length == 0) {
         $('#txtOrderID').val("INV-001");
     } else {
         let ordersCount = orders.length + 1;
@@ -17,7 +16,26 @@ function generateOrderID() {
     }
 }
 
+//get Date
+function getCurrentDate() {
+
+    function padTo2Digits(num) {
+        return num.toString().padStart(2, '0');
+    }
+
+    function formatDate(date = new Date()) {
+        return [
+            date.getFullYear(),
+            padTo2Digits(date.getMonth() + 1),
+            padTo2Digits(date.getDate()),
+        ].join('-');
+    }
+
+    return formatDate();
+}
+
 // Invoice Details section----------------------------------------------
+
 function loadCustomersForOrder() {
     $("#selectCusID").empty();
     for (let cus of customers) {
@@ -234,8 +252,6 @@ function updateItems(itemID) {
 }
 
 //discount function
-
-
 $("#Discount").on('keyup', function (event) {
     let finalTotal = 0;
     let dis = $("#Discount").val();
@@ -258,13 +274,49 @@ $("#txtCash").on('keyup', function (event) {
 });
 
 $('#btnSubmitOrder').click(function () {
-
+    placeOrder();
+    generateOrderID();
+    carts.splice(0, cart.length);
+    $('#tblCart').empty();
 });
 
+function placeOrder() {
+    if (saveOrder()) {
+        let orderId=$('#txtOrderID').val();
+        let date=$("#txtDate").val();
+        let discount = $('#txtDiscount').val();
+        let cname = $('#txtCusName').val();
 
+        for (let c of carts) {
+            let orderDetailsObject = orderDetail(orderId,date,cname,c.cartICode,c.cartIPrice,c.cartOrderQty,c.cartTotal);
+            orderDetails.push(orderDetailsObject);
+        }
+        alert("Successfully place order..");
+        $('#btnSubmitOrder').attr('disabled', true);
+    } else {
+        alert("UnSuccessfully..Something went Wrong !!!");
+        $('#btnSubmitOrder').attr('disabled', false);
+    }
+}
 
+function saveOrder() {
+    let oid = $('#txtOrderID').val();
+    let cName= $('#orderCustomerName').val();
+    let date =$("#txtDate").val();
+     let dis =$('#Discount').val();
+    let total = parseInt($('#subtotal').text());
 
+    let orderObject = order(oid, cName, date,dis,total);
+    let isSaved = orders.push(orderObject);
 
+    loadAllDashboardSales();
+    loadAllDashboardItems();
+    if (isSaved) {
+
+        return true;
+    }
+    return false;
+}
 
 
 

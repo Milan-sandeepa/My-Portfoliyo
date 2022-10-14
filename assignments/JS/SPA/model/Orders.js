@@ -1,7 +1,7 @@
-function order(orderId,customerId,date,discount,itemsTotal){
+function order(orderId,customerName,date,discount,itemsTotal){
     return{
         id: orderId,
-        cusId: customerId,
+        cusName:customerName,
         date:date,
         discount:discount,
         total:itemsTotal

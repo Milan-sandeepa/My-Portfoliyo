@@ -55,8 +55,8 @@
             <div class="dash-2col border shadow rounded-3 d-flex align-items-center justify-content-evenly p-4">
                 <i class="fa fa-chart-line fa-3x text-primary"></i>
                 <div >
-                    <h4>Today Sales</h4>
-                    <h6 class="mb-0">$1234</h6>
+                    <h4>Total Orders</h4>
+                    <h6 class="mb-0">0</h6>
                 </div>
             </div>
         </div>
@@ -93,60 +93,19 @@
         <div class="col-12 col-xl-6" id="table-1">
             <div  class="table-style   mt-4 border shadow rounded-3 p-4">
                 <div class="pb-2"><h2>Recent Sales</h2></div>
-                <div class="col mt-2 table-responsive">
+                <div class="col mt-2 table-responsive" style="height: 310px; overflow-y: scroll">
                     <table class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th scope="col">Invoice</th>
                             <th scope="col">Date</th>
                             <th scope="col">Customer</th>
+                            <th scope="col">Discount (%)</th>
                             <th scope="col">Amount</th>
-                            <th scope="col">Status</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">INV-0123</th>
-                            <td>Sep 2022</td>
-                            <td>Jhon Smith</td>
-                            <td>$100</td>
-                            <td>Paid</td>
-                        </tr>
+                        <tbody id="tblDashboardSales">
+
                         </tbody>
                     </table>
                 </div>
@@ -155,7 +114,7 @@
 
         <div class="table-style col-12 col-xl-6 mt-4  border shadow rounded-3 p-4">
             <div class="pb-2"><h5>Recently Added Products</h5></div>
-            <div class="col mt-2 table-responsive" style="height: 320px; overflow-y: scroll">
+            <div class="col mt-2 table-responsive" style="height: 310px; overflow-y: scroll">
                 <table class="table table-bordered table-hover" >
                     <thead>
                     <tr>

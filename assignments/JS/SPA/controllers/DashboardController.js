@@ -76,3 +76,27 @@ function loadAllDashboardItems() {
     }
 
 }
+
+function loadAllDashboardSales() {
+    //remove all the table body content before adding data
+    $("#tblDashboardSales").empty();
+
+
+    // get all item records from the array
+    for (var order of orders) {
+        // add those data to the table row
+        var row = `<tr>
+
+        <td class="">${order.id}</td>
+        <td>${order.date}</td>
+        <td>${order.cusName}</td>
+        <td>${order.discount}</td>>
+        <td>${order.total}</td>>
+        
+        </tr>`;
+
+        //then add it to the table body of customer table
+        $("#tblDashboardSales").append(row);
+    }
+
+}
