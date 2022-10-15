@@ -125,7 +125,7 @@ main > section:first-child > aside > div {
     border-radius: 8px;
 }
 
-main > section:first-child > aside > div > img {
+main > section:first-child > aside > div >a> img {
     margin-top: 6px;
     margin-bottom: 6.35px;
     width: 42.86px;
@@ -151,19 +151,19 @@ main > section:first-child > aside > div {
     justify-content: space-between;
 }
 
-main > section:first-child > aside > div > img:nth-child(1) {
+main > section:first-child > aside > div >a:nth-child(1)>img {
     margin-left: 5px;
     width: 70px;
 }
 
-main > section:first-child > aside > div > img:nth-child(2) {
+main > section:first-child > aside > div >a:nth-child(2)> img {
     margin-top: 6px;
     margin-right: 8px;
     width: 52.86px;
     height: 50.86px;
 }
 
-main > section:first-child > aside > div > img:nth-child(3) {
+main > section:first-child > aside > div >a:nth-child(3)> img {
     margin-right: 15px;
 }
 
@@ -975,25 +975,25 @@ main > section:nth-child(8) > section:nth-child(2) > aside > div {
     justify-content: center;
 }
 
-main > section:nth-child(8) > section:nth-child(2) > aside > div > img {
+main > section:nth-child(8) > section:nth-child(2) > aside > div > a > img {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-main > section:nth-child(8) > section:nth-child(2) > aside > div > img:nth-child(1) {
+main > section:nth-child(8) > section:nth-child(2) > aside > div >a:nth-child(1)>img {
     width: 68px;
     height: 42.57px;
     cursor: pointer;
     margin-left: 0;
 }
 
-main > section:nth-child(8) > section:nth-child(2) > aside > div > img:nth-child(2) {
+main > section:nth-child(8) > section:nth-child(2) > aside > div >a:nth-child(2)>img{
     width: 52.86px;
     height: 50.86px;
     cursor: pointer;
 }
 
-main > section:nth-child(8) > section:nth-child(2) > aside > div > img:nth-child(3) {
+main > section:nth-child(8) > section:nth-child(2) > aside > div > a:nth-child(3)>img {
     width: 42.86px;
     height: 45px;
     cursor: pointer;
@@ -1782,8 +1782,12 @@ footer > p {
 
 @media all and (max-width: 749px) {
 
-    header > nav > ul {
-        display: none;
+    header > nav > ul > li {
+        padding: 6px;
+    }
+
+    header > nav > ul > li > a {
+        font-size: 10px;
     }
 
     main > section:first-child > img {
@@ -1981,6 +1985,11 @@ footer > p {
 }
 
 @media all and (max-width: 620px) {
+
+    header > nav{
+        display: none;
+    }
+
     main > section:nth-child(5) > div:nth-child(3) > button {
         margin-top: 60px;
     }
