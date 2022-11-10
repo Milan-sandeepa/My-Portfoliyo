@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Style.css">
+    <title>Que</title>
+</head>
+<body>
+<section class="container">
+    <div>
+        <div class="form-group ms-2 me-2" id="nameArea">
+            <label for="txtName">Enter Name</label>
+            <input class="form-control" id="txtName" type="text">
+        </div>
+        <div class="form-group ms-2 me-2" id="inputArea">
+            <label for="txtColor">Select Color</label>
+            <input class="form-control" id="txtColor" type="color">
+        </div>
+        <div>
+            <button class="btn btn-primary" id="btn">Add</button>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 100px">
+        <div id="display" style="position: relative;top: 220px;height: 65px;border-bottom: 2px dotted black" class="col-10 d-flex justify-content-end">
+
+        </div>
+        <div class="col-2" style="position: relative;top: 100px;left: 50px"><img src="assets/img/store.png" alt="store"
+                                                                     style="width: 200px;height: 200px"></div>
+    </div>
+
+
+</section>
+
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    var persons=[
+        {name:"Nimesh", color:"red"},
+        {name:"Kasun", color:"green"},
+        {name:"Amal", color:"blue"}
+    ];
+
+    setInterval(renderQue,1000);
+
+    function renderQue(){
+        $("#display").empty();
+        for (let i = 0; i < persons.length; i++) {
+            $("#display").append(`
+    <div style="color: white;background-color: ${persons[i].color};height: 50px;padding: 10px;margin: 5px;border-radius: 10px"><h3>${persons[i].name}</h3></div>
+    `);
+        }
+
+        var lastPerson=persons.pop();
+        persons.unshift(lastPerson);
+
+    }
+
+    $("#btn").click(function (){
+
+        var person={
+            name:$("#txtName").val(),
+            color:$("#txtColor").val()
+        }
+        persons.push(person);
+    });
+
+</script>
+</body>
+</html>

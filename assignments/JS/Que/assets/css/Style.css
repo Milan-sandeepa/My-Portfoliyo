@@ -1,0 +1,24 @@
+#nameArea{
+    position: relative;
+    top: 100px;
+}
+
+#inputArea{
+    position: relative;
+    top: 130px;
+}
+#txtName{
+    width: 350px;
+}
+
+#txtColor{
+    width: 350px;
+    height: 50px;
+}
+
+#btn{
+    position: relative;
+    top: 160px;
+    width: 150px;
+    left: 8px;
+}
