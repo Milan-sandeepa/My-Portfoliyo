@@ -7,3 +7,10 @@ body{
     background-image: url("../img/background.jpg");
     background-size: cover;
 }
+
+#character{
+    position: absolute;
+    top: 545px;
+    left: 50px;
+    height: 155px;
+}
