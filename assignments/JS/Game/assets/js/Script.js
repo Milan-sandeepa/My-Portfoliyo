@@ -3,10 +3,12 @@
 // });
 $(window).on('load',function (){
     IdleAnimationStart();
+    PopupUserNameStart();
 })
 
-charNumber = 0;
-IdleAnimationNumber=0;
+var charNumber = 0;
+var IdleAnimationNumber=0;
+var UserName="";
 
 
 function IdleAnimate() {
@@ -22,3 +24,27 @@ function IdleAnimationStart(){
     IdleAnimationNumber=setInterval(IdleAnimate,100);
 }
 
+function PopUpUserName(){
+    $("#popup").css("display","block");
+}
+
+function PopupUserNameStart(){
+    setTimeout(PopUpUserName,1000);
+}
+
+$("#playBtn").click(function (){
+
+    UserName=$("#txtInput").val();
+
+    if (UserName=="" || UserName==null){
+        alert("Please Enter Your Name");
+    }else {
+        $("#txtlbl").text(UserName);
+        PopupNameClose();
+    }
+
+});
+
+function PopupNameClose(){
+    $("#popup").css("display","none");
+}

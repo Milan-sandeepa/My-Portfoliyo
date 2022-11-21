@@ -1,6 +1,73 @@
 body{
     margin: 0;
 }
+
+#popup{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    display: none;
+}
+#popup>div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 120px;
+}
+#popup>div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#scoreBoard{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 200px;
+    height: 110px;
+    border: 2px solid black;
+    background: white;
+    opacity: 50%;
+    border-radius: 10px;
+}
+
+#userName{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 2px;
+    font-size: 20px;
+}
+#txtlbl{
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+}
+
+#scoreCount{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 15px;
+    font-size: 40px;
+}
+
+#txtScore{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 12px;
+    font-size: 20px;
+}
 #display{
     width: 100%;
     height: 100vh;
