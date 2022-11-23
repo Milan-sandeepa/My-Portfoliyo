@@ -73,11 +73,23 @@ body{
     height: 100vh;
     background-image: url("../img/background.jpg");
     background-size: cover;
+    background-repeat: repeat-x;
 }
 
 #character{
     position: absolute;
-    top: 545px;
-    left: 50px;
+    left: 5%;
     height: 155px;
+    bottom: 8%;
+}
+
+@keyframes moveBackground {
+    100%{
+        transform: translateX(-2950px);
+    }
+}
+
+.moveBackground{
+    animation: moveBackground 6s linear infinite;
+    : ;
 }
