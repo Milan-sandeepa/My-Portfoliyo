@@ -12,6 +12,7 @@ var IdleAnimationNumber=0;
 var RunAnimationNumber=0;
 var UserName="";
 var moveBackgroundId=0;
+var scoreCountId=0;
 
 function PopUpUserName(){
     $("#popup").css("display","block");
@@ -67,14 +68,15 @@ function RunAnimate() {
     }
     $("#character").attr("src","assets/img/Run_"+charRunNumber+".png");
     charRunNumber++;
-    CountScore();
 }
 
 function RunAnimationStart(){
     clearInterval(IdleAnimationNumber);
     clearInterval(moveBackgroundId);
+    clearInterval(scoreCountId);
     RunAnimationNumber=setInterval(RunAnimate,100);
-    moveBackgroundId=setInterval(moveBackground,100)
+    moveBackgroundId=setInterval(moveBackground,100);
+    scoreCountId=setInterval(CountScore,300);
 }
 // --------------------Run function End--------------------------------
 var x=0;

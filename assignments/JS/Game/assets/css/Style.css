@@ -79,17 +79,6 @@ body{
 #character{
     position: absolute;
     left: 5%;
-    height: 155px;
+    height: 190px;
     bottom: 8%;
-}
-
-@keyframes moveBackground {
-    100%{
-        transform: translateX(-2950px);
-    }
-}
-
-.moveBackground{
-    animation: moveBackground 6s linear infinite;
-    : ;
 }
