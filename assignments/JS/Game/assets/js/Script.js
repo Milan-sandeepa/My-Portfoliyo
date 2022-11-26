@@ -28,6 +28,14 @@ backgroundSound.loop = true;
 backgroundSound.volume = 0.2;
 backgroundSound.autoplay = true;
 
+//jump
+var jumpSound = new Audio("assets/sounds/jump.mp3");
+jumpSound.volume = 0.8;
+
+//levelUp
+var levelUpSound = new Audio("assets/sounds/levelUp.mp3");
+levelUpSound.volume = 0.8;
+
 
 // -----------Sound Effects end------------
 
@@ -64,6 +72,7 @@ function PopupNameClose() {
         } else if (a==32) {
             clearInterval(RunAnimationNumber);
             clearInterval(moveBackgroundId);
+            jumpSound.play();
             JumpAnimationStart();
             moveBackgroundId = setInterval(moveBackground, 50);
         }else if (a==122){
