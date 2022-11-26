@@ -9,13 +9,24 @@ body{
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 400px;
+    width: 565px;
     height: 300px;
     border-radius: 10px;
-    background-image: url("../img/background.jpg");
+    background-image: url("../img/wood.png");
     background-size: cover;
     display: none;
 }
+#txtInput{
+    height: 30px;
+
+}
+
+#playBtn{
+    width: 136px;
+    height: 35px;
+    margin-top: 10px;
+}
+
 #popup>div{
     display: flex;
     justify-content: center;
