@@ -63,27 +63,30 @@ $("#playBtn").click(function () {
 function PopupNameClose() {
     $("#popup").css("display", "none");
 
-    addEventListener("keypress", function (event) {
-        var a = event.which;
 
-        if (a==13) {
-            clearInterval(RunAnimationNumber);
-            RunAnimationStart();
-        } else if (a==32) {
-            clearInterval(RunAnimationNumber);
-            clearInterval(moveBackgroundId);
-            jumpSound.play();
-            JumpAnimationStart();
-            moveBackgroundId = setInterval(moveBackground, 50);
-        }else if (a==122){
-            clearInterval(RunAnimationNumber);
-            clearInterval(JumpAnimationNumber);
-            SlideAnimationStart();
-        }
-    })
 }
-
 // --------------------popUp window End--------------------------------
+
+addEventListener("keypress", function (event) {
+    var a = event.which;
+
+    if (a==13) {
+        clearInterval(RunAnimationNumber);
+        RunAnimationStart();
+    } else if (a==32) {
+        clearInterval(RunAnimationNumber);
+        clearInterval(moveBackgroundId);
+        jumpSound.play();
+        JumpAnimationStart();
+        moveBackgroundId = setInterval(moveBackground, 50);
+    }else if (a==122){
+        clearInterval(RunAnimationNumber);
+        clearInterval(JumpAnimationNumber);
+        SlideAnimationStart();
+    }
+});
+
+// --------------------Key check Listener End--------------------------------
 function IdleAnimate() {
 
     if (charNumber == 10) {
