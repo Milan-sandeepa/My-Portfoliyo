@@ -1,6 +1,7 @@
 $(document).ready(function () {
     IdleAnimationStart();
     PopupUserNameStart();
+    CreateBarriers();
 });
 // $(window).on('load',function (){
 //
@@ -72,7 +73,9 @@ function Keychek(){
 
         if (a==13) {
             clearInterval(RunAnimationNumber);
+            clearInterval(barrierAnimationId);
             RunAnimationStart();
+            barrierAnimationId=setInterval(barrierAnimation,100);
         } else if (a==32) {
             clearInterval(RunAnimationNumber);
             clearInterval(moveBackgroundId);
@@ -203,3 +206,47 @@ function SlideAnimationStart() {
 }
 
 // --------------------Slide function End--------------------------------
+
+ var marginLeft=1600;
+function CreateBarriers(){
+
+    for (let i = 0; i < 10; i++) {
+        var box=$(`<div> </div>`);
+        $(box).toggleClass("box")
+        $(box).attr("id","box"+i);
+
+        $("#display").append(box);
+        $(box).css("margin-left", marginLeft + "px");
+        $(box).css("left",0);
+        marginLeft = marginLeft +600;
+    }
+
+}
+
+var barrierAnimationId=0;
+function barrierAnimation(){
+    for (let i = 0; i < 10; i++) {
+        var box=document.getElementById("box"+i);
+        var currentMargin=getComputedStyle(box).marginLeft;
+        var newMarginLeft=parseInt(currentMargin)-25;
+        $(box).css("margin-left", newMarginLeft + "px");
+    }
+}
+
+// --------------------CreateBox function End--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
