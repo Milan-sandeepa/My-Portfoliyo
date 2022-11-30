@@ -65,24 +65,27 @@ function PopupNameClose() {
     $("#popup").css("display", "none");
     Keychek();
 }
+
 // --------------------popUp window End--------------------------------
 
-function Keychek(){
+function Keychek() {
     addEventListener("keypress", function (event) {
         var a = event.which;
 
-        if (a==13) {
+        if (a == 13) {
             clearInterval(RunAnimationNumber);
             clearInterval(barrierAnimationId);
             RunAnimationStart();
-            barrierAnimationId=setInterval(barrierAnimation,100);
-        } else if (a==32) {
+            barrierAnimationId = setInterval(barrierAnimation, 100);
+        } else if (a == 32) {
             clearInterval(RunAnimationNumber);
             clearInterval(moveBackgroundId);
             jumpSound.play();
             JumpAnimationStart();
-            moveBackgroundId = setInterval(moveBackground, 50);
-        }else if (a==122){
+            moveBackgroundId = setInterval(moveBackground, 100);
+            clearInterval(barrierAnimationId);
+            barrierAnimationId = setInterval(barrierAnimation, 100);
+        } else if (a == 122) {
             clearInterval(RunAnimationNumber);
             clearInterval(JumpAnimationNumber);
             SlideAnimationStart();
@@ -142,9 +145,21 @@ function CountScore() {
 
 // --------------------Score function End--------------------------------
 
-var bottom=0;
+var marginTop = 490;
 
 function JumpAnimate() {
+
+    if (charJumpNumber == 3) {
+        marginTop = marginTop - 100;
+        $("#character").css("margin-top", marginTop + "px");
+    }
+
+    if (charJumpNumber == 8) {
+        marginTop = marginTop + 100;
+        $("#character").css("margin-top", marginTop + "px");
+    }
+
+    charJumpNumber++;
 
     if (charJumpNumber == 10) {
         charJumpNumber = 0;
@@ -154,25 +169,15 @@ function JumpAnimate() {
         RunAnimationStart();
     }
 
-    if (charJumpNumber==4){
-        bottom=30;
-        $("#character").css("bottom", bottom + "%");
-    }
-
-    if (charJumpNumber==9){
-        bottom=8;
-        $("#character").css("bottom", bottom + "%");
-    }
-
     $("#character").attr("src", "assets/img/Jump_" + charJumpNumber + ".png");
-    charJumpNumber++;
+
 }
 
 function JumpAnimationStart() {
     clearInterval(IdleAnimationNumber);
     clearInterval(RunAnimationNumber);
     clearInterval(JumpAnimationNumber);
-    JumpAnimationNumber=setInterval(JumpAnimate,100);
+    JumpAnimationNumber = setInterval(JumpAnimate, 100);
 }
 
 // --------------------Jump function End--------------------------------
@@ -181,15 +186,15 @@ function SlideAnimate() {
 
     if (charSlideNumber == 10) {
         charSlideNumber = 0;
-         clearInterval(SlideAnimationNumber);
-         RunAnimationStart();
+        clearInterval(SlideAnimationNumber);
+        RunAnimationStart();
     }
 
-    if (charSlideNumber==4){
+    if (charSlideNumber == 4) {
         $("#character").css("height", "125px");
     }
 
-    if (charSlideNumber==9){
+    if (charSlideNumber == 9) {
         $("#character").css("height", "190px");
     }
 
@@ -202,38 +207,53 @@ function SlideAnimationStart() {
     clearInterval(RunAnimationNumber);
     clearInterval(JumpAnimationNumber);
     clearInterval(SlideAnimationNumber);
-    SlideAnimationNumber=setInterval(SlideAnimate,100);
+    SlideAnimationNumber = setInterval(SlideAnimate, 100);
 }
 
 // --------------------Slide function End--------------------------------
 
- var marginLeft=1600;
-function CreateBarriers(){
+var marginLeft = 1600;
 
+function CreateBarriers() {
     for (let i = 0; i < 10; i++) {
-        var box=$(`<div> </div>`);
+        var box = $(`<div> </div>`);
         $(box).toggleClass("box")
-        $(box).attr("id","box"+i);
+        $(box).attr("id", "box" + i);
 
         $("#display").append(box);
         $(box).css("margin-left", marginLeft + "px");
-        $(box).css("left",0);
-        marginLeft = marginLeft +600;
+        $(box).css("left", 0);
+        marginLeft = marginLeft + 1200;
     }
-
 }
 
-var barrierAnimationId=0;
-function barrierAnimation(){
+var barrierAnimationId = 0;
+
+function barrierAnimation() {
     for (let i = 0; i < 10; i++) {
-        var box=document.getElementById("box"+i);
-        var currentMargin=getComputedStyle(box).marginLeft;
-        var newMarginLeft=parseInt(currentMargin)-25;
+        var box = document.getElementById("box" + i);
+        var currentMargin = getComputedStyle(box).marginLeft;
+        var newMarginLeft = parseInt(currentMargin) - 30;
         $(box).css("margin-left", newMarginLeft + "px");
+
+        if (newMarginLeft >= -110 & newMarginLeft <= 100) {
+            console.log(marginTop);
+            if (marginTop ==490) {
+                clearInterval(IdleAnimationNumber);
+                clearInterval(RunAnimationNumber);
+                clearInterval(JumpAnimationNumber);
+                clearInterval(moveBackgroundId);
+                clearInterval(barrierAnimationId);
+                clearInterval(scoreCountId);
+            }else {
+                JumpAnimationStart();
+            }
+
+        }
     }
 }
 
-// --------------------CreateBox function End--------------------------------
+// --------------------CreateBarrier function End--------------------------------
 
 
 
