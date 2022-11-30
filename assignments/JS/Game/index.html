@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Game</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Style.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
 </head>
@@ -17,7 +18,7 @@
 </div>
 
 <section id="display">
-        <img src="assets/img/Idle_7.png" alt="boy" id="character">
+    <img src="assets/img/Idle_7.png" alt="boy" id="character">
     <div id="scoreBoard">
         <div id="userName">
             <label id="txtlbl">Guest</label>
@@ -31,8 +32,26 @@
         </div>
     </div>
 </section>
+<section id="endGame" class="bg-primary">
+    <div class="d-flex justify-content-center mt-5">
+        <h3 id="endName">User Name</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h1 id="endHeadtile">Game Over</h1>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <h3 style="color: white">Score</h3>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <h1 id="endScore" style="color: white">00</h1>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+        <button id="btnReload" class="btn btn-warning">PLAY AGAIN</button>
+    </div>
+</section>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/Script.js"></script>
 </body>
 </html>

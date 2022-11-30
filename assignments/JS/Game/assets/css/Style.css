@@ -45,7 +45,7 @@ body{
     right: 20px;
     top: 20px;
     width: 200px;
-    height: 110px;
+    height: 140px;
     border: 2px solid black;
     background: white;
     opacity: 50%;
@@ -94,8 +94,8 @@ body{
     position: absolute;
     left: 5%;
     height: 190px;
-    /*bottom: 8%;*/
-    margin-top: 490px;
+    bottom: 8%;
+    /*margin-top: 490px;*/
 }
 
 .box{
@@ -107,4 +107,34 @@ body{
     position: absolute;
     bottom: 6%;
     right: 8%;
+}
+
+#endGame{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4CD137;
+    z-index: 4;
+    border-radius: 10px;
+    display: none;
+}
+
+#endHeadtile{
+    font-size: 80px;
+    color: red;
+}
+
+#endScore{
+    font-size: 50px;
+}
+
+#endName{
+    color: white;
+    margin-top: 20px;
+    font-size: 40px;
 }

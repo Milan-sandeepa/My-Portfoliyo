@@ -11,11 +11,13 @@ var charNumber = 0;
 var charRunNumber = 0;
 var charJumpNumber = 0;
 var charSlideNumber = 0;
+var charDeadNumber=0;
 
 var IdleAnimationNumber = 0;
 var RunAnimationNumber = 0;
 var JumpAnimationNumber = 0;
 var SlideAnimationNumber = 0;
+var DeadAnimationNumber=0;
 
 var UserName = "";
 var moveBackgroundId = 0;
@@ -145,18 +147,18 @@ function CountScore() {
 
 // --------------------Score function End--------------------------------
 
-var marginTop = 490;
+var marginTop = 8;
 
 function JumpAnimate() {
 
     if (charJumpNumber == 3) {
-        marginTop = marginTop - 100;
-        $("#character").css("margin-top", marginTop + "px");
+        marginTop = marginTop + 12;
+        $("#character").css("bottom", marginTop + "%");
     }
 
     if (charJumpNumber == 8) {
-        marginTop = marginTop + 100;
-        $("#character").css("margin-top", marginTop + "px");
+        marginTop = marginTop - 12;
+        $("#character").css("bottom", marginTop + "%");
     }
 
     charJumpNumber++;
@@ -238,13 +240,15 @@ function barrierAnimation() {
 
         if (newMarginLeft >= -110 & newMarginLeft <= 100) {
             console.log(marginTop);
-            if (marginTop ==490) {
+            if (marginTop ==8) {
+                DeadAnimationsStart();
                 clearInterval(IdleAnimationNumber);
                 clearInterval(RunAnimationNumber);
                 clearInterval(JumpAnimationNumber);
                 clearInterval(moveBackgroundId);
                 clearInterval(barrierAnimationId);
                 clearInterval(scoreCountId);
+
             }else {
                 JumpAnimationStart();
             }
@@ -254,6 +258,44 @@ function barrierAnimation() {
 }
 
 // --------------------CreateBarrier function End--------------------------------
+
+function DeadAnimates() {
+
+    if (charDeadNumber == 9) {
+        clearInterval(DeadAnimationNumber);
+        setTimeout(GameOver,100);
+    }
+
+    if (charDeadNumber == 4) {
+        $("#character").css("height", "190px");
+    }
+
+    if (charDeadNumber == 9) {
+        $("#character").css("height", "190px");
+    }
+
+    $("#character").attr("src", "assets/img/Dead_" + charDeadNumber + ".png");
+    charDeadNumber++;
+}
+
+function DeadAnimationsStart() {
+    DeadAnimationNumber = setInterval(DeadAnimates, 100);
+}
+
+// --------------------Dead function End--------------------------------
+
+function GameOver(){
+    $("#endName").text(UserName);
+    $("#endScore").text(s);
+    $("#endGame").css("display", "block");
+}
+
+// --------------------GameOver function End--------------------------------
+
+$("#btnReload").click(function () {
+    location.reload();
+});
+// --------------------PageReload function End--------------------------------
 
 
 
