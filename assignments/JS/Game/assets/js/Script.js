@@ -11,13 +11,13 @@ var charNumber = 0;
 var charRunNumber = 0;
 var charJumpNumber = 0;
 var charSlideNumber = 0;
-var charDeadNumber=0;
+var charDeadNumber = 0;
 
 var IdleAnimationNumber = 0;
 var RunAnimationNumber = 0;
 var JumpAnimationNumber = 0;
 var SlideAnimationNumber = 0;
-var DeadAnimationNumber=0;
+var DeadAnimationNumber = 0;
 
 var UserName = "";
 var moveBackgroundId = 0;
@@ -65,14 +65,15 @@ $("#playBtn").click(function () {
 
 function PopupNameClose() {
     $("#popup").css("display", "none");
-    Keychek();
+    Keycheck();
 }
 
 // --------------------popUp window End--------------------------------
 
-function Keychek() {
-    addEventListener("keypress", function (event) {
+function Keycheck() {
+    $(document).on('keypress', function (event) {
         var a = event.which;
+
 
         if (a == 13) {
             clearInterval(RunAnimationNumber);
@@ -92,6 +93,8 @@ function Keychek() {
             clearInterval(JumpAnimationNumber);
             SlideAnimationStart();
         }
+
+
     });
 }
 
@@ -215,6 +218,7 @@ function SlideAnimationStart() {
 // --------------------Slide function End--------------------------------
 
 var marginLeft = 1600;
+var boxList = new Array();
 
 function CreateBarriers() {
     for (let i = 0; i < 10; i++) {
@@ -226,6 +230,8 @@ function CreateBarriers() {
         $(box).css("margin-left", marginLeft + "px");
         $(box).css("left", 0);
         marginLeft = marginLeft + 1200;
+        var b = "box" + i;
+        boxList.push(b);
     }
 }
 
@@ -239,8 +245,7 @@ function barrierAnimation() {
         $(box).css("margin-left", newMarginLeft + "px");
 
         if (newMarginLeft >= -110 & newMarginLeft <= 100) {
-            console.log(marginTop);
-            if (marginTop ==8) {
+            if (marginTop == 8) {
                 DeadAnimationsStart();
                 clearInterval(IdleAnimationNumber);
                 clearInterval(RunAnimationNumber);
@@ -249,13 +254,27 @@ function barrierAnimation() {
                 clearInterval(barrierAnimationId);
                 clearInterval(scoreCountId);
 
-            }else {
+            } else {
                 JumpAnimationStart();
+                if ("box" + i === "box9") {
+                    setTimeout(gamewin, 2000);
+                }
             }
 
         }
     }
 }
+
+function gamewin() {
+    clearInterval(IdleAnimationNumber);
+    clearInterval(RunAnimationNumber);
+    clearInterval(JumpAnimationNumber);
+    clearInterval(moveBackgroundId);
+    clearInterval(barrierAnimationId);
+    clearInterval(scoreCountId);
+    Gamewin();
+}
+
 
 // --------------------CreateBarrier function End--------------------------------
 
@@ -263,7 +282,7 @@ function DeadAnimates() {
 
     if (charDeadNumber == 9) {
         clearInterval(DeadAnimationNumber);
-        setTimeout(GameOver,100);
+        setTimeout(GameOver, 100);
     }
 
     if (charDeadNumber == 4) {
@@ -284,7 +303,7 @@ function DeadAnimationsStart() {
 
 // --------------------Dead function End--------------------------------
 
-function GameOver(){
+function GameOver() {
     $("#endName").text(UserName);
     $("#endScore").text(s);
     $("#endGame").css("display", "block");
@@ -295,7 +314,21 @@ function GameOver(){
 $("#btnReload").click(function () {
     location.reload();
 });
+
+$("#btnWinReload").click(function () {
+    location.reload();
+});
+
 // --------------------PageReload function End--------------------------------
+
+function Gamewin() {
+    $("#winName").text(UserName);
+    $("#winScore").text(s);
+    $("#winGame").css("display", "block");
+}
+
+// --------------------winGame function End--------------------------------
+
 
 
 

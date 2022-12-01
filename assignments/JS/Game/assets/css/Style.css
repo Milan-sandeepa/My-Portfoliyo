@@ -138,3 +138,34 @@ body{
     margin-top: 20px;
     font-size: 40px;
 }
+
+/*------------------*/
+#winGame{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4CD137;
+    z-index: 5;
+    border-radius: 10px;
+    display: none;
+}
+
+#winHeadtile{
+    font-size: 80px;
+    color: red;
+}
+
+#winScore{
+    font-size: 50px;
+}
+
+#winName{
+    color: white;
+    margin-top: 20px;
+    font-size: 40px;
+}
